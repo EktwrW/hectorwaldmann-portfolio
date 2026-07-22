@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f4f6f9;
+  --surface: #ffffff;
+  --border: #e3e7ec;
+  --text: #262c33;
+  --text-muted: #697280;
+  --accent: #1a72b8;
+  --accent-hover: #155d97;
+  --accent-soft: rgba(26, 114, 184, 0.08);
+  --silver: #9aa3ad;
+  --header-bg: rgba(255, 255, 255, 0.82);
+  --glass: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --shadow: 0 1px 3px rgba(20, 30, 45, 0.06), 0 8px 30px rgba(20, 30, 45, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg: #0e1319;
+  --bg-alt: #141b22;
+  --surface: #19212a;
+  --border: #28323d;
+  --text: #e7ebef;
+  --text-muted: #98a3b0;
+  --accent: #3f97e2;
+  --accent-hover: #5aa8ea;
+  --accent-soft: rgba(63, 151, 226, 0.14);
+  --silver: #7a838d;
+  --header-bg: rgba(14, 19, 25, 0.78);
+  --glass: rgba(255, 255, 255, 0.045);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(620px 520px at 12% 6%, rgba(63, 151, 226, 0.2), transparent 62%),
+    radial-gradient(560px 520px at 90% 20%, rgba(122, 18, 102, 0.15), transparent 60%),
+    radial-gradient(760px 640px at 74% 92%, rgba(63, 151, 226, 0.14), transparent 66%);
+}
+
+[data-theme="light"] .bg-blobs {
+  background: radial-gradient(620px 520px at 12% 6%, rgba(26, 114, 184, 0.12), transparent 62%),
+    radial-gradient(560px 520px at 90% 20%, rgba(122, 18, 102, 0.08), transparent 60%),
+    radial-gradient(760px 640px at 74% 92%, rgba(26, 114, 184, 0.08), transparent 66%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
