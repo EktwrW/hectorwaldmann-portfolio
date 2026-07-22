@@ -1,5 +1,4 @@
 import BrandLogo from "./BrandLogo";
-import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -9,7 +8,6 @@ export default function Footer() {
           <BrandLogo className="h-5 w-auto" decorative />
           Hector Waldman
         </div>
-        <SocialLinks />
         <p>hectorwaldmann.site &middot; &copy; {new Date().getFullYear()}</p>
       </div>
     </footer>

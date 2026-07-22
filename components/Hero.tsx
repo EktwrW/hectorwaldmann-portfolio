@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="top" className="relative mx-auto max-w-content px-8 pb-[110px] pt-[120px]">
       <div className="relative z-10">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-[13px] text-text-muted">
-          <Image src="/apps369-logo.png" alt="" width={16} height={16} className="h-4 w-auto" aria-hidden="true" />
+          <Image src="/apps369-iso.png" alt="" width={256} height={256} className="h-[18px] w-[18px]" aria-hidden="true" />
           Independent maker &middot; Apps 369
         </div>
 
