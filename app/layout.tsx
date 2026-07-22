@@ -142,6 +142,10 @@ const jsonLd = {
         "@type": "Brand",
         name: "Apps 369",
       },
+      sameAs: [
+        "https://www.linkedin.com/in/ektwr/",
+        "https://github.com/EktwrW",
+      ],
       areaServed: [
         { "@type": "Country", name: "United States" },
         { "@type": "Country", name: "Canada" },

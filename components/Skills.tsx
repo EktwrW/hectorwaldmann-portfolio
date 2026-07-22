@@ -1,8 +1,8 @@
 const SKILL_GROUPS = [
   { title: "Mobile — Flutter", items: ["Flutter", "Dart", "Riverpod / BLoC", "Native platform channels"] },
-  { title: "Frontend — React / TypeScript", items: ["React", "TypeScript", "Next.js", "GraphQL"] },
+  { title: "Frontend — React / TypeScript", items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL"] },
   { title: "Backend & Data", items: ["Python", "Laravel / PHP", "Node.js", "PostgreSQL"] },
-  { title: "AI & Cloud / DevOps", items: ["Voice-AI integration", "LLM APIs", "Docker", "CI/CD", "AWS / GCP"] },
+  { title: "AI & Cloud / DevOps", items: ["Voice-AI integration", "LLM APIs", "Docker", "CI/CD", "Vercel", "AWS / GCP"] },
 ];
 
 export default function Skills() {

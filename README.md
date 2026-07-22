@@ -1,115 +1,80 @@
-# hectorwaldmann.site — Brief de despliegue
+# Hector Waldman — Portfolio
 
-Portfolio personal de Hector Waldman — Next.js 14 (App Router) + TypeScript + Tailwind CSS.
-Replica el diseño aprobado en Claude Design. El código y el contenido ya están terminados.
+Personal portfolio of **Hector Waldman**, Senior Flutter Architect & Full-Stack Engineer.
 
-**Este archivo es un brief para Claude Cowork (o cualquier agente con acceso a terminal y navegador):
-sigue los pasos en orden, de arriba a abajo, para dejar el sitio publicado en hectorwaldmann.site.**
+🔗 **Live:** [hectorwaldmann.site](https://hectorwaldmann.site)
 
----
+A fast, accessible, single-page portfolio with a light/dark theme, built with the Next.js App Router and deployed on Vercel.
 
-## Ya está hecho (no tocar)
-- Las 7 secciones del sitio, con el contenido y los links reales (Foodly, NPSN, CACCF, GoTribe).
-- Tema light/dark funcional con persistencia.
-- Formulario de contacto conectado a Formspree (`https://formspree.io/f/mlgqwdvq`) — funciona tal cual.
-- CV en PDF enlazado desde el botón "Download CV".
+## Tech stack
 
-## Nota importante antes de empezar
-Este proyecto se escribió a mano siguiendo las convenciones estándar de Next.js 14, pero **no se pudo
-ejecutar `npm install` / `npm run build` en el entorno donde se generó** (restricción de red temporal
-del sandbox). Por eso el Paso 1 es obligatorio y no se puede saltar: hay que confirmar que compila
-limpio antes de desplegar.
+- **Framework:** Next.js 14 (App Router) · React 18 · TypeScript
+- **Styling:** Tailwind CSS · CSS custom properties for light/dark theming
+- **Fonts:** Space Grotesk (display) + Manrope (body) via `next/font`
+- **Forms:** Formspree (contact form)
+- **SEO:** metadata + Open Graph/Twitter cards · `robots.ts` · `sitemap.ts` · JSON-LD (Person/WebSite)
+- **Analytics:** Vercel Web Analytics + Speed Insights
+- **Hosting:** Vercel · domain DNS on Hostinger
 
----
+## Features
 
-## Paso 1 — Instalar dependencias y verificar que compila
+- Seven sections: Hero, About, Independent Projects (Apps 369 / Foodly), Professional Work, Skills, Contact, Footer.
+- Light/dark theme toggle with `localStorage` persistence and a pre-paint anti-flash script.
+- Responsive top navigation — inline on tablet/desktop, hamburger menu on mobile.
+- Auto-scrolling marquee of real Foodly App Store screenshots (pauses on hover, respects `prefers-reduced-motion`).
+- Working contact form wired to Formspree.
 
-```bash
-cd site
-npm install
-npm run build
-```
-
-- Si `npm run build` termina sin errores → seguir al Paso 2.
-- Si aparecen errores de TypeScript/imports → corregirlos (son archivos `.tsx` estándar de Next.js
-  App Router, nada exótico) y repetir `npm run build` hasta que quede limpio.
-- Verificación visual rápida: `npm run dev`, abrir `http://localhost:3000`, revisar que las 7 secciones
-  carguen bien y que el toggle de tema (arriba a la derecha) cambie entre claro y oscuro sin parpadeos.
-
-## Paso 2 — Subir el código a GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial portfolio site"
-```
-
-- Crear un repositorio nuevo en GitHub (público o privado, a elección de Hector) — por ejemplo
-  `hectorwaldmann-portfolio`.
-- Conectarlo y subir:
-
-```bash
-git remote add origin <URL_DEL_REPO_NUEVO>
-git branch -M main
-git push -u origin main
-```
-
-## Paso 3 — Desplegar en Vercel (gratis)
-
-1. Entrar a [vercel.com](https://vercel.com) e iniciar sesión con la cuenta de GitHub de Hector.
-2. "Add New" → "Project" → importar el repositorio recién creado.
-3. Vercel detecta Next.js automáticamente — no hace falta tocar configuración de build ni variables
-   de entorno.
-4. Click en "Deploy" y esperar a que termine (1-2 minutos). Vercel entrega una URL tipo
-   `hectorwaldmann-portfolio.vercel.app` — confirmar que el sitio carga bien ahí antes de seguir.
-
-## Paso 4 — Conectar el dominio hectorwaldmann.site (Hostinger → Vercel)
-
-1. En el proyecto de Vercel: **Settings → Domains → Add** → escribir `hectorwaldmann.site` → Add.
-2. Vercel muestra los registros DNS exactos a configurar (normalmente un registro **A** para el
-   dominio raíz apuntando a `76.76.21.21`, y un **CNAME** para `www` apuntando a
-   `cname.vercel-dns.com` — usar los valores exactos que Vercel muestre en pantalla, pueden variar).
-3. Entrar al panel de Hostinger: [hpanel.hostinger.com/domains](https://hpanel.hostinger.com/domains)
-   → seleccionar `hectorwaldmann.site` → **DNS / Nameservers** → **Zona DNS**.
-4. Editar/crear los registros A y CNAME con los valores exactos que dio Vercel en el paso 2.
-5. Guardar. La propagación puede tardar entre unos minutos y 24-48h (normalmente es rápida).
-6. Confirmar que `https://hectorwaldmann.site` carga el sitio y que Vercel marca el dominio como
-   "Valid Configuration" (candado verde) en su panel.
-
-## Paso 5 (opcional) — Reemplazar el placeholder de Foodly
-
-En `components/IndependentProjects.tsx` hay un panel de color con una "F" grande como placeholder
-(no había una captura real disponible al construir el sitio). Si Hector provee una captura o mockup
-real de Foodly, reemplazar ese bloque por una imagen (`next/image`) apuntando al archivo en `public/`.
-
----
-
-## Estructura del proyecto
+## Project structure
 
 ```
 app/
-  layout.tsx        — fuentes (Space Grotesk + Manrope), tema anti-flash, metadata SEO
-  page.tsx          — ensambla todas las secciones
-  globals.css       — variables de color para tema light/dark
+  layout.tsx        Fonts, theme anti-flash, SEO metadata, JSON-LD, analytics
+  page.tsx          Assembles all sections
+  globals.css       Theme color variables, marquee + logo-swap styles
+  icon.png          Favicon
+  apple-icon.png    Apple touch icon
+  robots.ts         /robots.txt
+  sitemap.ts        /sitemap.xml
 components/
-  Header.tsx        — nav + logo + toggle de tema
+  Header.tsx        Nav + logo + theme toggle (responsive / hamburger)
   Hero.tsx
   About.tsx
-  IndependentProjects.tsx  — sección "Apps 369" (Foodly)
-  ProfessionalWork.tsx     — NPSN, CACCF, GoTribe
+  IndependentProjects.tsx   Apps 369 / Foodly + screenshot carousel
+  ProfessionalWork.tsx      Keel Mind, and other contributions
   Skills.tsx
-  Contact.tsx        — formulario (Formspree, ya configurado)
+  Contact.tsx       Formspree contact form + social links
   Footer.tsx
-  ThemeToggle.tsx     — switch light/dark con persistencia en localStorage
+  ThemeToggle.tsx   Light/dark switch (persisted)
+  BrandLogo.tsx     Theme-aware Apps 369 logo
+  FoodlyCarousel.tsx
+  SocialLinks.tsx   LinkedIn + GitHub
 public/
-  apps369-logo.png
-  Hector_Waldman_CV.pdf   — el botón "Download CV" del hero apunta aquí
+  apps369-logo.png / apps369-logo-dark.png   Brand logo (light / dark text)
+  foodly-iso-white.png
+  foodly/slide-01..08.webp                   App Store screenshots
+  og-image.png                               Social share image
+  Hector_Waldman_CV.pdf
 ```
 
-## Checklist final
+## Getting started
 
-- [x] Paso 1 — `npm install` + `npm run build` sin errores
-- [x] Paso 2 — código en GitHub → https://github.com/EktwrW/hectorwaldmann-portfolio
-- [x] Paso 3 — desplegado en Vercel, URL `.vercel.app` funcionando → https://hectorwaldmann-portfolio.vercel.app
-- [x] Paso 4 — dominio `hectorwaldmann.site` conectado y con candado verde en Vercel → https://hectorwaldmann.site
-- [ ] Paso 5 (opcional) — imagen real de Foodly
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
+
+Other scripts:
+
+```bash
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint     # eslint
+```
+
+## Deployment
+
+Hosted on **Vercel** with automatic deployments: every push to `main` triggers a new production build and deploy. The custom domain `hectorwaldmann.site` points to Vercel via an `A` record (apex) on Hostinger DNS, with `www` redirecting to the apex.
+
+---
+
+© Hector Waldman · [hectorwaldmann.site](https://hectorwaldmann.site)

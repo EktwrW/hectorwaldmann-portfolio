@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import BrandLogo from "./BrandLogo";
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -23,7 +23,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           className="flex items-center gap-[11px] font-display text-[17px] font-semibold tracking-tight"
         >
-          <Image src="/apps369-logo.png" alt="Apps 369" width={26} height={26} className="h-[26px] w-auto" priority />
+          <BrandLogo className="h-[26px] w-auto" priority />
           <span>Hector Waldman</span>
         </a>
 

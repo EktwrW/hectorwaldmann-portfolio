@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FoodlyCarousel from "./FoodlyCarousel";
+import BrandLogo from "./BrandLogo";
 
 const FOODLY_TAGS = ["Flutter", "Dart", "Laravel", "PostgreSQL", "REST API"];
 
@@ -10,7 +11,7 @@ export default function IndependentProjects() {
         <div>
           <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.12em] text-accent">Independent Projects</p>
           <div className="flex items-center gap-3">
-            <Image src="/apps369-logo.png" alt="" width={36} height={36} className="h-9 w-auto" aria-hidden="true" />
+            <BrandLogo className="h-9 w-auto" decorative />
             <h2 className="font-display text-[clamp(30px,3.6vw,42px)] font-bold leading-[1.1] tracking-tight">
               Apps 369
             </h2>

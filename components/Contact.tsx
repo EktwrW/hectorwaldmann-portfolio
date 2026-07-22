@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import SocialLinks from "./SocialLinks";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mlgqwdvq";
 
@@ -107,6 +108,11 @@ export default function Contact() {
             </button>
           </form>
         )}
+      </div>
+
+      <div className="mt-8 flex flex-col items-center gap-2.5">
+        <p className="text-[14px] text-text-muted">Or connect with me</p>
+        <SocialLinks />
       </div>
     </section>
   );
