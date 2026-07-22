@@ -108,8 +108,8 @@ public/
 
 ## Checklist final
 
-- [ ] Paso 1 — `npm install` + `npm run build` sin errores
-- [ ] Paso 2 — código en GitHub
-- [ ] Paso 3 — desplegado en Vercel, URL `.vercel.app` funcionando
-- [ ] Paso 4 — dominio `hectorwaldmann.site` conectado y con candado verde en Vercel
+- [x] Paso 1 — `npm install` + `npm run build` sin errores
+- [x] Paso 2 — código en GitHub → https://github.com/EktwrW/hectorwaldmann-portfolio
+- [x] Paso 3 — desplegado en Vercel, URL `.vercel.app` funcionando → https://hectorwaldmann-portfolio.vercel.app
+- [x] Paso 4 — dominio `hectorwaldmann.site` conectado y con candado verde en Vercel → https://hectorwaldmann.site
 - [ ] Paso 5 (opcional) — imagen real de Foodly
