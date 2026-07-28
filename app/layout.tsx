@@ -21,7 +21,7 @@ const manrope = Manrope({
 const SITE_URL = "https://hectorwaldmann.site";
 const TITLE = "Hector Waldman — Senior Flutter Architect & Full-Stack Engineer";
 const DESCRIPTION =
-  "Senior Flutter architect and full-stack engineer, and independent maker of Apps 369. I design and ship production-grade cross-platform apps end to end — from Flutter architecture to backend, data, and cloud. Available for remote work across the US, Canada, Europe, and LATAM.";
+  "Senior Flutter architect and full-stack engineer with 6 years shipping production cross-platform apps, and independent maker of Apps 369. One codebase, every surface — from Flutter architecture to backend, data, cloud, and the AI running inside them. Available for remote work across the US, Canada, Europe, and LATAM.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -48,6 +48,13 @@ export const metadata: Metadata = {
     "Android developer",
     "Apps 369",
     "Foodly",
+    "Flutter design system",
+    "BLoC",
+    "Clean Architecture",
+    "voice AI engineer",
+    "AI integration engineer",
+    "AWS Bedrock",
+    "GCP Cloud Run",
     "remote software engineer",
     "software engineer USA",
     "software engineer Canada",
@@ -124,19 +131,32 @@ const jsonLd = {
       url: SITE_URL,
       image: `${SITE_URL}/og-image.png`,
       jobTitle: "Senior Flutter Architect & Full-Stack Engineer",
+      email: "mailto:hwaldmann@gmail.com",
       description:
-        "Senior Flutter architect and full-stack engineer, and independent maker of Apps 369. Designs and ships production-grade cross-platform apps end to end.",
+        "Senior Flutter architect and full-stack engineer with 6 years shipping production cross-platform apps, and independent maker of Apps 369. Designs and ships cross-platform products end to end — Flutter architecture, backend, data, cloud, and AI integration.",
       knowsAbout: [
         "Flutter",
         "Dart",
         "Mobile app architecture",
+        "Design systems",
+        "BLoC",
+        "Clean Architecture",
         "Full-stack engineering",
         "Laravel",
         "PostgreSQL",
         "React",
         "TypeScript",
         "Node.js",
+        "Python",
         "Cloud",
+        "AI integration",
+        "Voice AI",
+        "Natural language processing",
+      ],
+      knowsLanguage: [
+        { "@type": "Language", name: "Spanish" },
+        { "@type": "Language", name: "English" },
+        { "@type": "Language", name: "Portuguese" },
       ],
       brand: {
         "@type": "Brand",

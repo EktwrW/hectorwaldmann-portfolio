@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ProofBar from "@/components/ProofBar";
 import About from "@/components/About";
-import IndependentProjects from "@/components/IndependentProjects";
-import ProfessionalWork from "@/components/ProfessionalWork";
+import FlagshipProduct from "@/components/FlagshipProduct";
+import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import AiAugmented from "@/components/AiAugmented";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,10 +15,12 @@ export default function Home() {
       <Header />
       <main className="relative z-10">
         <Hero />
+        <ProofBar />
         <About />
-        <IndependentProjects />
-        <ProfessionalWork />
+        <FlagshipProduct />
+        <Experience />
         <Skills />
+        <AiAugmented />
         <Contact />
       </main>
       <Footer />

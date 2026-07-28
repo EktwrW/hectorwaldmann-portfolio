@@ -111,7 +111,15 @@ export default function Contact() {
       </div>
 
       <div className="mt-8 flex flex-col items-center gap-2.5">
-        <p className="text-[14px] text-text-muted">Or connect with me</p>
+        <p className="text-[14px] text-text-muted">
+          Or email me directly at{" "}
+          <a
+            href="mailto:hwaldmann@gmail.com"
+            className="font-semibold text-accent hover:text-accent-hover"
+          >
+            hwaldmann@gmail.com
+          </a>
+        </p>
         <SocialLinks />
       </div>
     </section>

@@ -108,6 +108,21 @@ textarea:focus-visible {
   display: none;
 }
 
+/* Native <details> disclosure — hide the default marker, animate the chevron */
+.disclosure > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure__chevron {
+  transition: transform 0.2s ease;
+}
+.disclosure[open] .disclosure__chevron {
+  transform: rotate(180deg);
+}
+
 /* Foodly screenshots — auto-scrolling marquee */
 .marquee {
   overflow: hidden;

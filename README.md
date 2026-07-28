@@ -18,11 +18,14 @@ A fast, accessible, single-page portfolio with a light/dark theme, built with th
 
 ## Features
 
-- Seven sections: Hero, About, Independent Projects (Apps 369 / Foodly), Professional Work, Skills, Contact, Footer.
+- Eight sections: Hero, Proof bar, About, Flagship Product (Foodly), Experience, Skills, How I work, Contact — plus the footer.
+- A hard-metrics proof bar directly under the hero (years shipped, 1.5 GB upload pipeline, 60–80% API-call reduction, org-wide design system).
+- Experience combines a **featured case study** (GuardianAI real-time voice AI) with a **career timeline**, so depth and chronology live in one section instead of two.
+- Progressive disclosure via native `<details>` — the case study reads compact, with the deep technical breakdown one click away, no extra JavaScript.
 - Light/dark theme toggle with `localStorage` persistence and a pre-paint anti-flash script.
 - Responsive top navigation — inline on tablet/desktop, hamburger menu on mobile.
 - Auto-scrolling marquee of real Foodly App Store screenshots (pauses on hover, respects `prefers-reduced-motion`).
-- Working contact form wired to Formspree.
+- Working contact form wired to Formspree, plus a plain-text email fallback.
 
 ## Project structure
 
@@ -30,19 +33,21 @@ A fast, accessible, single-page portfolio with a light/dark theme, built with th
 app/
   layout.tsx        Fonts, theme anti-flash, SEO metadata, JSON-LD, analytics
   page.tsx          Assembles all sections
-  globals.css       Theme color variables, marquee + logo-swap styles
+  globals.css       Theme color variables, marquee, disclosure + logo-swap styles
   icon.png          Favicon
   apple-icon.png    Apple touch icon
   robots.ts         /robots.txt
   sitemap.ts        /sitemap.xml
 components/
   Header.tsx        Nav + logo + theme toggle (responsive / hamburger)
-  Hero.tsx
+  Hero.tsx          Tagline, availability + languages row
+  ProofBar.tsx      Four hard metrics under the hero
   About.tsx
-  IndependentProjects.tsx   Apps 369 / Foodly + screenshot carousel
-  ProfessionalWork.tsx      Keel Mind, and other contributions
-  Skills.tsx
-  Contact.tsx       Formspree contact form + social links
+  FlagshipProduct.tsx       Foodly — store links, metrics + screenshot carousel
+  Experience.tsx            Featured case study (GuardianAI) + career timeline
+  Skills.tsx        Eight skill groups
+  AiAugmented.tsx   "How I work" band — AI-augmented, not AI-dependent
+  Contact.tsx       Formspree contact form + email + social links
   Footer.tsx
   ThemeToggle.tsx   Light/dark switch (persisted)
   BrandLogo.tsx     Theme-aware Apps 369 logo

@@ -6,8 +6,8 @@ import BrandLogo from "./BrandLogo";
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
-  { href: "#apps369", label: "Apps 369" },
-  { href: "#work", label: "Work" },
+  { href: "#foodly", label: "Foodly" },
+  { href: "#work", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
