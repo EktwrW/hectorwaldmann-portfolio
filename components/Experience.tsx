@@ -82,10 +82,10 @@ type Role = {
 const ROLES: Role[] = [
   {
     company: "Keel Mind",
-    title: "Flutter Architect & Senior Flutter Developer",
+    title: "Flutter Architect & Senior Frontend Developer",
     period: "Jan 2022 – Jul 2026",
     place: "Remote · Toronto, Canada · multi-tenant mental-health platform",
-    note: "Agency placement → contract bought out by the client, Aug 2024",
+    note: "Agency placement → direct contract with the client, Sep 2024",
     summary: (
       <>
         Four and a half years on the same platform. I led the data-layer modernization of its main Flutter app,
