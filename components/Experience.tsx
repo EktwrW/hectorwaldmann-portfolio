@@ -27,9 +27,9 @@ const CASE_COLUMNS: { title: string; body: ReactNode }[] = [
     title: "What I built",
     body: (
       <>
-        The real-time streaming voice pipeline, from scratch: a gapless Web Audio PCM playback scheduler, a fully
-        typed WebSocket protocol with heartbeat keep-alive and exponential-backoff reconnect, and Silero/ONNX
-        voice-activity detection for barge-in.
+        The real-time streaming voice pipeline, from scratch: a gapless Web Audio PCM playback scheduler, a
+        fully typed WebSocket protocol with heartbeat keep-alive and exponential-backoff reconnect, and
+        Silero/ONNX voice-activity detection for barge-in.
       </>
     ),
   },
@@ -74,7 +74,8 @@ type Role = {
   period: string;
   place: string;
   note?: string;
-  bullets: ReactNode[];
+  summary: ReactNode;
+  highlights: { label: string; body: ReactNode }[];
   links: { label: string; href: string }[];
 };
 
@@ -84,36 +85,56 @@ const ROLES: Role[] = [
     title: "Flutter Architect & Senior Flutter Developer",
     period: "Jan 2022 – Jul 2026",
     place: "Remote · Toronto, Canada · multi-tenant mental-health platform",
-    note: "Placed with the client as a Band of Coders consultant until Aug 2024, then contracted directly after Keel bought the engagement out of the agency to keep me exclusively. Same product, same team, no break in the work.",
-    bullets: [
+    note: "Agency placement → contract bought out by the client, Aug 2024",
+    summary: (
       <>
-        Architected <strong className="text-text">km_fl_common_ui</strong> from scratch — the company-wide Flutter
-        design system and shared-component library consumed by every Flutter app in the org, with an
-        override-ready color architecture that powers white-label rebranding.
-      </>,
-      <>
-        Built a media-upload pipeline for files up to <strong className="text-text">1.5 GB</strong> on Flutter Web:
-        bypassed the HTTP client for the browser&rsquo;s native XHR/Blob API and staged bytes through IndexedDB so
-        the Dart heap never held the payload — with a multi-file queue, per-file progress and cancellation unified
-        across web and native.
-      </>,
-      <>
-        Delivered the complete MVP of <strong className="text-text">Pressio</strong>, a transcript-analysis product
-        — React 19 · Vite · TypeScript over a Fastify service on AWS Bedrock, with OpenAPI docs and a Dockerised
-        test suite. Handed over production-ready.
-      </>,
-      <>
-        Led the data-layer modernization of the org&rsquo;s main production Flutter app, set team-wide engineering
-        standards — CI/CD, code review, documentation — and mentored 2+ developers.
-      </>,
-      <>
-        Integrated production AI/ML end to end: a voice-biomarker scoring pipeline across Flutter, Python and Node,
-        and an NLP service that auto-generates clinical notes from therapy transcripts.
-      </>,
+        Four and a half years on the same platform. I led the data-layer modernization of its main Flutter app,
+        set the engineering standards the team works to, and mentored two developers.
+      </>
+    ),
+    highlights: [
+      {
+        label: "km_fl_common_ui",
+        body: (
+          <>
+            The company-wide Flutter design system, architected from scratch. Override-ready theming turns a
+            white-label rebrand into configuration.
+          </>
+        ),
+      },
+      {
+        label: "1.5 GB single-file uploads",
+        body: (
+          <>
+            Browser-native XHR/Blob staged through IndexedDB on Flutter Web, so the Dart heap never holds the
+            payload.
+          </>
+        ),
+      },
+      {
+        label: "Pressio, MVP to handover",
+        body: (
+          <>
+            A transcript-analysis product on React 19 and Fastify over AWS Bedrock, delivered production-ready.
+          </>
+        ),
+      },
+      {
+        label: "AI in production",
+        body: (
+          <>
+            Voice-biomarker scoring across Flutter, Python and Node, plus an NLP service that drafts clinical
+            notes from therapy transcripts.
+          </>
+        ),
+      },
     ],
     links: [
       { label: "National Peer Support Network", href: "https://app.npsn.org/" },
-      { label: "White-label build", href: "https://caccfgambling.support-mind.com/" },
+      {
+        label: "White-label build",
+        href: "https://caccfgambling.support-mind.com/",
+      },
     ],
   },
   {
@@ -121,38 +142,59 @@ const ROLES: Role[] = [
     title: "Flutter Developer",
     period: "Feb 2021 – Jan 2022",
     place: "Remote · Atlanta, Georgia · software agency",
-    bullets: [
-      <>
-        Built <strong className="text-text">GoTribe Fitness</strong> from scratch for an agency client — Flutter
-        and BLoC on a GraphQL backend, with multi-device BLE connectivity for real-time heart-rate and training
-        metrics plus deep native-platform integrations. Live on the App Store and Google Play.
-      </>,
-      <>
-        Flutter delivery for US agency clients, ending in the full-time placement with the client that ran for the
-        next four and a half years.
-      </>,
+    summary: <>US agency delivery that ended in the placement which ran for the next four and a half years.</>,
+    highlights: [
+      {
+        label: "GoTribe Fitness",
+        body: (
+          <>
+            Built from scratch — Flutter and BLoC over GraphQL, with multi-device BLE for live heart-rate and
+            training metrics.
+          </>
+        ),
+      },
+      {
+        label: "Native platform work",
+        body: (
+          <>Platform-channel integrations for the device features Flutter couldn&rsquo;t reach on its own.</>
+        ),
+      },
     ],
     links: [
-      { label: "GoTribe · iOS", href: "https://apps.apple.com/in/app/gotribe-fitness/id6747635444" },
-      { label: "GoTribe · Android", href: "https://play.google.com/store/apps/details?id=com.gotribe.app" },
+      {
+        label: "GoTribe · iOS",
+        href: "https://apps.apple.com/in/app/gotribe-fitness/id6747635444",
+      },
+      {
+        label: "GoTribe · Android",
+        href: "https://play.google.com/store/apps/details?id=com.gotribe.app",
+      },
     ],
   },
   {
     company: "Native App",
     title: "Flutter Developer",
     period: "Jul 2020 – Jan 2021",
-    place: "Remote · Bogotá, Colombia",
-    bullets: [
-      <>
-        Built the reusable widget library behind Native.App&rsquo;s no-code app builder — my first design system,
-        and the direct antecedent of km_fl_common_ui at Keel.
-      </>,
-      <>
-        Shipped responsive Web, PWA, iOS and Android modules with advanced BLoC patterns, Firestore integrations
-        and Cloud Functions.
-      </>,
+    place: "Remote · Bogotá, Colombia · no-code app builder",
+    summary: <>Where the design-system habit started — the direct antecedent of what I later built at Keel.</>,
+    highlights: [
+      {
+        label: "Widget library",
+        body: <>The reusable component library behind a no-code app builder, and my first design system.</>,
+      },
+      {
+        label: "Web, PWA, iOS, Android",
+        body: (
+          <>One codebase across four surfaces, with advanced BLoC patterns, Firestore and Cloud Functions.</>
+        ),
+      },
     ],
-    links: [{ label: "universodecreadores.com", href: "https://universodecreadores.com" }],
+    links: [
+      {
+        label: "universodecreadores.com",
+        href: "https://universodecreadores.com",
+      },
+    ],
   },
 ];
 
@@ -164,14 +206,16 @@ export default function Experience() {
         Where I&rsquo;ve shipped
       </h2>
       <p className="mb-12 max-w-[56ch] text-[15.5px] leading-relaxed text-text-muted">
-        Six years across three teams — an agency in Atlanta, a no-code startup in Bogotá, and four and a half years
-        on one mental-health platform in Toronto.
+        Six years across three teams — an agency in Atlanta, a no-code startup in Bogotá, and four and a half
+        years on one mental-health platform in Toronto.
       </p>
 
       {/* Featured case study */}
       <article className="mb-16 overflow-hidden rounded-2xl border border-border bg-surface shadow-token">
         <div className="border-b border-border bg-accent-soft px-8 py-7 sm:px-10">
-          <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.14em] text-accent">Featured case study</p>
+          <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.14em] text-accent">
+            Featured case study
+          </p>
           <h3 className="mb-2 font-display text-[clamp(21px,2.4vw,28px)] font-bold leading-tight tracking-tight">
             GuardianAI — real-time voice AI, built from scratch
           </h3>
@@ -242,53 +286,71 @@ export default function Experience() {
       </article>
 
       {/* Career timeline */}
-      <ol className="relative ml-1 border-l border-border">
-        {ROLES.map((role) => (
-          <li key={role.company} className="relative pb-12 pl-8 last:pb-0 sm:pl-10">
-            <span
-              className="absolute -left-[5.5px] top-[7px] h-[11px] w-[11px] rounded-full bg-accent ring-4 ring-bg"
-              aria-hidden="true"
-            />
+      <div className="relative ml-1">
+        <span
+          aria-hidden="true"
+          className="absolute bottom-0 left-0 top-2 w-px bg-[linear-gradient(to_bottom,var(--border),var(--border)_84%,transparent)]"
+        />
 
-            <div className="mb-1 flex flex-col gap-x-4 gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 className="font-display text-[19px] font-bold leading-snug tracking-tight">
-                {role.title} <span className="text-accent">· {role.company}</span>
-              </h3>
-              <p className="shrink-0 text-[13.5px] font-semibold text-text-muted">{role.period}</p>
-            </div>
-            <p className="mb-4 text-[13.5px] text-text-muted">{role.place}</p>
+        <ol>
+          {ROLES.map((role, roleIndex) => (
+            <li key={role.company} className="relative pb-14 pl-8 last:pb-0 sm:pl-11">
+              <span
+                className={`absolute -left-[5.5px] top-[9px] h-[11px] w-[11px] rounded-full ring-4 ring-bg ${
+                  roleIndex === 0 ? "bg-accent" : "border-2 border-border bg-bg"
+                }`}
+                aria-hidden="true"
+              />
 
-            {role.note && (
-              <p className="mb-5 rounded-xl border border-border bg-surface px-4 py-3 text-[13.5px] leading-relaxed text-text-muted">
-                {role.note}
-              </p>
-            )}
+              <div className="flex flex-col gap-x-6 gap-y-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="font-display text-[21px] font-bold leading-tight tracking-tight">
+                    {role.company}
+                  </h3>
+                  <p className="mt-1 text-[14.5px] font-semibold text-accent">{role.title}</p>
+                  <p className="mt-1.5 text-[13px] text-text-muted">{role.place}</p>
+                </div>
+                <p className="w-fit shrink-0 self-start rounded-full border border-border bg-bg-alt px-3 py-1 text-[12.5px] font-semibold tabular-nums text-text-muted">
+                  {role.period}
+                </p>
+              </div>
 
-            <ul className="mb-5 grid gap-2.5">
-              {role.bullets.map((bullet, index) => (
-                <li key={index} className="flex gap-3 text-[14.5px] leading-relaxed text-text-muted">
-                  <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
+              {role.note && (
+                <p className="mt-4 inline-flex rounded-xl bg-accent-soft px-3.5 py-1.5 text-[12.5px] font-semibold leading-relaxed text-accent sm:rounded-full">
+                  {role.note}
+                </p>
+              )}
 
-            <div className="flex flex-wrap gap-x-5 gap-y-1.5">
-              {role.links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-1.5 text-[14px] font-semibold text-accent hover:text-accent-hover"
-                >
-                  {link.label} <span aria-hidden="true">&rarr;</span>
-                </a>
-              ))}
-            </div>
-          </li>
-        ))}
-      </ol>
+              <p className="mt-5 max-w-[74ch] text-[15px] leading-relaxed">{role.summary}</p>
+
+              <dl className="mt-7 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+                {role.highlights.map((highlight) => (
+                  <div key={highlight.label}>
+                    <dt className="mb-1 font-display text-[14.5px] font-bold tracking-tight">
+                      {highlight.label}
+                    </dt>
+                    <dd className="text-[14px] leading-relaxed text-text-muted">{highlight.body}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div className="mt-7 flex flex-wrap gap-x-5 gap-y-1.5">
+                {role.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-1.5 text-[14px] font-semibold text-accent hover:text-accent-hover"
+                  >
+                    {link.label} <span aria-hidden="true">&rarr;</span>
+                  </a>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
