@@ -131,7 +131,7 @@ const jsonLd = {
       url: SITE_URL,
       image: `${SITE_URL}/og-image.png`,
       jobTitle: "Senior Flutter Architect & Full-Stack Engineer",
-      email: "mailto:hwaldmann@gmail.com",
+      email: "mailto:hector@hectorwaldmann.site",
       description:
         "Senior Flutter architect and full-stack engineer with 6 years shipping production cross-platform apps, and independent maker of Apps 369. Designs and ships cross-platform products end to end — Flutter architecture, backend, data, cloud, and AI integration.",
       knowsAbout: [

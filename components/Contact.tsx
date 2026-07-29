@@ -114,10 +114,10 @@ export default function Contact() {
         <p className="text-[14px] text-text-muted">
           Or email me directly at{" "}
           <a
-            href="mailto:hwaldmann@gmail.com"
+            href="mailto:hector@hectorwaldmann.site"
             className="font-semibold text-accent hover:text-accent-hover"
           >
-            hwaldmann@gmail.com
+            hector@hectorwaldmann.site
           </a>
         </p>
         <SocialLinks />
