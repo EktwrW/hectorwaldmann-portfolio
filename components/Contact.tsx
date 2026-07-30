@@ -93,6 +93,17 @@ export default function Contact() {
               />
             </div>
 
+            {/* Honeypot: invisible to people, irresistible to bots. Formspree
+                silently discards any submission where this field is filled. */}
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ display: "none" }}
+            />
+
             {status === "error" && (
               <p className="text-[14px] text-red-500" role="alert">
                 Something went wrong sending your message. Please try again, or email me directly.
