@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "#foodly", label: "Foodly" },
   { href: "#work", label: "Experience" },
   { href: "#skills", label: "Skills" },
+  { href: "#services", label: "Hire me" },
   { href: "#contact", label: "Contact" },
 ];
 

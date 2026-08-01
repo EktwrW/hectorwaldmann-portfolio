@@ -14,13 +14,12 @@ export default function Hero() {
           Independent maker &middot; Apps 369
         </div>
 
-        <h1 className="mb-6 max-w-[14ch] font-display text-[clamp(42px,6.2vw,78px)] font-bold leading-[1.02] tracking-tighter text-balance">
+        <h1 className="mb-6 max-w-[16ch] font-display text-[clamp(42px,6.2vw,78px)] font-bold leading-[1.02] tracking-tighter text-balance">
           Hector Waldman
+          <span className="mt-3.5 block font-display text-[clamp(20px,2.2vw,26px)] font-semibold leading-tight tracking-tight text-accent">
+            Senior Flutter Architect &amp; Full-Stack Engineer
+          </span>
         </h1>
-
-        <p className="mb-6 font-display text-[clamp(20px,2.2vw,26px)] font-semibold text-accent">
-          Senior Flutter Architect &amp; Full-Stack Engineer
-        </p>
 
         <p className="mb-9 max-w-[52ch] text-[17px] leading-relaxed text-text-muted">
           <span className="mb-2.5 block font-display text-[clamp(19px,2vw,23px)] font-bold tracking-tight text-text">
@@ -33,10 +32,16 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-3">
           <a
-            href="#contact"
+            href="#services"
             className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-[15px] font-semibold text-white shadow-token transition-colors hover:bg-accent-hover"
           >
-            Contact <span aria-hidden="true">&rarr;</span>
+            Hire me <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-6 py-3.5 text-[15px] font-semibold text-text transition-colors hover:bg-bg-alt"
+          >
+            Contact
           </a>
           <a
             href="/Hector_Waldman_CV.pdf"
@@ -52,7 +57,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            Open to remote roles
+            Available for freelance, contract &amp; full-time
           </span>
           {AVAILABILITY.map((item) => (
             <span key={item} className="inline-flex items-center gap-2.5">

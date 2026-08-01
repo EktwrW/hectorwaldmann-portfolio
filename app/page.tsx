@@ -6,6 +6,7 @@ import FlagshipProduct from "@/components/FlagshipProduct";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import AiAugmented from "@/components/AiAugmented";
+import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <AiAugmented />
+        <Services />
         <Contact />
       </main>
       <Footer />

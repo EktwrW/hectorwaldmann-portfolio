@@ -21,7 +21,7 @@ const manrope = Manrope({
 const SITE_URL = "https://hectorwaldmann.site";
 const TITLE = "Hector Waldman — Senior Flutter Architect & Full-Stack Engineer";
 const DESCRIPTION =
-  "Senior Flutter architect and full-stack engineer with 6 years shipping production cross-platform apps, and independent maker of Apps 369. One codebase, every surface — from Flutter architecture to backend, data, cloud, and the AI running inside them. Available for remote work across the US, Canada, Europe, and LATAM.";
+  "Senior Flutter architect and full-stack engineer with 6 years shipping production cross-platform apps, and independent maker of Apps 369. Hire me to build a new mobile app end to end or to take over an existing one — Flutter architecture, backend, data, cloud, and the AI running inside them. Available for freelance projects, contract work and full-time roles across the US, Canada, Europe, and LATAM.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -55,6 +55,18 @@ export const metadata: Metadata = {
     "AI integration engineer",
     "AWS Bedrock",
     "GCP Cloud Run",
+    "hire a Flutter developer",
+    "freelance Flutter developer",
+    "freelance mobile app developer",
+    "contract Flutter developer",
+    "Flutter consultant",
+    "Flutter consulting",
+    "app development services",
+    "MVP app development",
+    "take over existing app",
+    "legacy app maintenance",
+    "mobile app rescue",
+    "hire a mobile app developer",
     "remote software engineer",
     "software engineer USA",
     "software engineer Canada",
@@ -162,9 +174,59 @@ const jsonLd = {
         "@type": "Brand",
         name: "Apps 369",
       },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Senior Flutter Architect & Full-Stack Engineer",
+        occupationalCategory: "15-1252.00",
+        skills:
+          "Flutter, Dart, mobile app architecture, Laravel, PostgreSQL, React, TypeScript, Node.js, cloud infrastructure, AI integration",
+      },
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Cross-platform mobile app development",
+            serviceType: "Flutter app development",
+            description:
+              "Building a new iOS, Android and Web app from zero to the app stores, including the backend, database and cloud infrastructure behind it.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Existing app takeover and maintenance",
+            serviceType: "Legacy app rescue and maintenance",
+            description:
+              "Auditing, stabilising and continuing development on an existing mobile or web codebase, including release pipelines and store compliance.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Flutter architecture and technical consulting",
+            serviceType: "Software architecture consulting",
+            description:
+              "Architecture reviews, design systems, state-management migrations and CI/CD setup for Flutter and full-stack teams.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI feature engineering inside products",
+            serviceType: "AI integration engineering",
+            description:
+              "Voice agents, speech pipelines, NLP search, moderation and LLM integrations shipped inside production applications.",
+          },
+        },
+      ],
       sameAs: [
         "https://www.linkedin.com/in/ektwr/",
         "https://github.com/EktwrW",
+        "https://theorg.com/org/get-a-head/org-chart/hector-waldman",
       ],
       areaServed: [
         { "@type": "Country", name: "United States" },
