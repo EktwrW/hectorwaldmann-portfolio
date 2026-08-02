@@ -63,141 +63,6 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
         </div>
       </section>
-      <section className="band-alt">
-        <div className="wrap">
-          <span className="eyebrow">{t["path.eyebrow"]}</span>
-          <h2 className="h2">{t["path.h2"]}</h2>
-          <div className="paths three">
-            <article className="card pathcard">
-              <div className="top">
-                <span className="tile">◆</span>
-                <span className="tag">{t["path.a.tag"]}</span>
-              </div>
-              <div className="body">
-                <h3>{t["path.a.h3"]}</h3>
-                <ul className="checks">
-                  <li>{t["path.a.1"]}</li>
-                  <li>{t["path.a.2"]}</li>
-                  <li>{t["path.a.3"]}</li>
-                </ul>
-              </div>
-              <div className="foot">
-                <a className="arrowlink" href={svc}>
-                  <span>{t["path.a.link"]}</span>
-                  <span>→</span>
-                </a>
-              </div>
-            </article>
-            <article className="card pathcard">
-              <div className="top">
-                <span className="tile">↻</span>
-                <span className="tag">{t["path.b.tag"]}</span>
-              </div>
-              <div className="body">
-                <h3>{t["path.b.h3"]}</h3>
-                <ul className="checks">
-                  <li>{t["path.b.1"]}</li>
-                  <li>{t["path.b.2"]}</li>
-                  <li>{t["path.b.3"]}</li>
-                </ul>
-              </div>
-              <div className="foot">
-                <a className="arrowlink" href={svc}>
-                  <span>{t["path.b.link"]}</span>
-                  <span>→</span>
-                </a>
-              </div>
-            </article>
-            <article className="card pathcard">
-              <div className="top">
-                <span className="tile">▤</span>
-                <span className="tag">{t["path.c.tag"]}</span>
-              </div>
-              <div className="body">
-                <h3>{t["path.c.h3"]}</h3>
-                <ul className="checks">
-                  <li>{t["path.c.1"]}</li>
-                  <li>{t["path.c.2"]}</li>
-                  <li>{t["path.c.3"]}</li>
-                </ul>
-              </div>
-              <div className="foot">
-                <a className="arrowlink" href={svc}>
-                  <span>{t["path.c.link"]}</span>
-                  <span>→</span>
-                </a>
-              </div>
-            </article>
-          </div>
-          <div className="recruiter">
-            <span>{t["path.rec"]}</span>
-            <a className="arrowlink" href="#experience">
-              <span>{t["path.rec1"]}</span>
-              <span>→</span>
-            </a>
-            <a className="arrowlink" href="/Hector_Waldman_CV.pdf">
-              <span>{t["path.rec2"]}</span>
-              <span>→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="foodly">
-        <div className="wrap">
-          <span className="eyebrow">{t["fo.eyebrow"]}</span>
-          <h2 className="h2">Foodly</h2>
-          <p className="lede">{t["fo.lede"]}</p>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '22px' }}>
-            <span className="pill">{t["fo.p1"]}</span>
-            <span className="pill">{t["fo.p2"]}</span>
-            <span className="pill">{t["fo.p3"]}</span>
-          </div>
-        </div>
-        <div className="marquee" style={{ marginTop: '44px' }}>
-          <ul className="marquee__track">
-            {[...SLIDES, ...SLIDES].map((n, i) => (
-              <li key={i}>
-                <img src={`/foodly/slide-0${n}.webp`} alt="" loading="lazy" />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      <section className="band-soft">
-        <div className="wrap">
-          <span className="eyebrow">{t["pr.eyebrow"]}</span>
-          <h2 className="h2">{t["pr.h2"]}</h2>
-          <div className="steps">
-            <div className="step is-first">
-              <span className="line"></span>
-              <div className="num">01</div>
-              <h3>{t["pr.1h"]}</h3>
-              <p>{t["pr.1p"]}</p>
-              <span className="dur">{t["pr.1d"]}</span>
-            </div>
-            <div className="step">
-              <span className="line"></span>
-              <div className="num">02</div>
-              <h3>{t["pr.2h"]}</h3>
-              <p>{t["pr.2p"]}</p>
-              <span className="dur">{t["pr.2d"]}</span>
-            </div>
-            <div className="step">
-              <span className="line"></span>
-              <div className="num">03</div>
-              <h3>{t["pr.3h"]}</h3>
-              <p>{t["pr.3p"]}</p>
-              <span className="dur">{t["pr.3d"]}</span>
-            </div>
-            <div className="step">
-              <div className="num">04</div>
-              <h3>{t["pr.4h"]}</h3>
-              <p>{t["pr.4p"]}</p>
-              <span className="dur">{t["pr.4d"]}</span>
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="experience" className="band-alt">
         <div className="wrap">
           <span className="eyebrow">{t["ex.eyebrow"]}</span>
@@ -283,6 +148,141 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           <div className="card" style={{ padding: '26px' }}>
             <p style={{ fontFamily: 'var(--font-display)', fontSize: '18px', lineHeight: '1.4' }}>{t["ab.quote"]}</p>
             <p className="small muted" style={{ marginTop: '14px' }}>{t["ab.quotesub"]}</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="wrap">
+          <span className="eyebrow">{t["path.eyebrow"]}</span>
+          <h2 className="h2">{t["path.h2"]}</h2>
+          <div className="paths three">
+            <article className="card pathcard">
+              <div className="top">
+                <span className="tile">◆</span>
+                <span className="tag">{t["path.a.tag"]}</span>
+              </div>
+              <div className="body">
+                <h3>{t["path.a.h3"]}</h3>
+                <ul className="checks">
+                  <li>{t["path.a.1"]}</li>
+                  <li>{t["path.a.2"]}</li>
+                  <li>{t["path.a.3"]}</li>
+                </ul>
+              </div>
+              <div className="foot">
+                <a className="arrowlink" href={svc}>
+                  <span>{t["path.a.link"]}</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </article>
+            <article className="card pathcard">
+              <div className="top">
+                <span className="tile">↻</span>
+                <span className="tag">{t["path.b.tag"]}</span>
+              </div>
+              <div className="body">
+                <h3>{t["path.b.h3"]}</h3>
+                <ul className="checks">
+                  <li>{t["path.b.1"]}</li>
+                  <li>{t["path.b.2"]}</li>
+                  <li>{t["path.b.3"]}</li>
+                </ul>
+              </div>
+              <div className="foot">
+                <a className="arrowlink" href={svc}>
+                  <span>{t["path.b.link"]}</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </article>
+            <article className="card pathcard">
+              <div className="top">
+                <span className="tile">▤</span>
+                <span className="tag">{t["path.c.tag"]}</span>
+              </div>
+              <div className="body">
+                <h3>{t["path.c.h3"]}</h3>
+                <ul className="checks">
+                  <li>{t["path.c.1"]}</li>
+                  <li>{t["path.c.2"]}</li>
+                  <li>{t["path.c.3"]}</li>
+                </ul>
+              </div>
+              <div className="foot">
+                <a className="arrowlink" href={svc}>
+                  <span>{t["path.c.link"]}</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div className="recruiter">
+            <span>{t["path.rec"]}</span>
+            <a className="arrowlink" href="#experience">
+              <span>{t["path.rec1"]}</span>
+              <span>→</span>
+            </a>
+            <a className="arrowlink" href="/Hector_Waldman_CV.pdf">
+              <span>{t["path.rec2"]}</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="foodly" className="band-alt">
+        <div className="wrap">
+          <span className="eyebrow">{t["fo.eyebrow"]}</span>
+          <h2 className="h2">Foodly</h2>
+          <p className="lede">{t["fo.lede"]}</p>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '22px' }}>
+            <span className="pill">{t["fo.p1"]}</span>
+            <span className="pill">{t["fo.p2"]}</span>
+            <span className="pill">{t["fo.p3"]}</span>
+          </div>
+        </div>
+        <div className="marquee" style={{ marginTop: '44px' }}>
+          <ul className="marquee__track">
+            {[...SLIDES, ...SLIDES].map((n, i) => (
+              <li key={i}>
+                <img src={`/foodly/slide-0${n}.webp`} alt="" loading="lazy" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <section className="band-soft">
+        <div className="wrap">
+          <span className="eyebrow">{t["pr.eyebrow"]}</span>
+          <h2 className="h2">{t["pr.h2"]}</h2>
+          <div className="steps">
+            <div className="step is-first">
+              <span className="line"></span>
+              <div className="num">01</div>
+              <h3>{t["pr.1h"]}</h3>
+              <p>{t["pr.1p"]}</p>
+              <span className="dur">{t["pr.1d"]}</span>
+            </div>
+            <div className="step">
+              <span className="line"></span>
+              <div className="num">02</div>
+              <h3>{t["pr.2h"]}</h3>
+              <p>{t["pr.2p"]}</p>
+              <span className="dur">{t["pr.2d"]}</span>
+            </div>
+            <div className="step">
+              <span className="line"></span>
+              <div className="num">03</div>
+              <h3>{t["pr.3h"]}</h3>
+              <p>{t["pr.3p"]}</p>
+              <span className="dur">{t["pr.3d"]}</span>
+            </div>
+            <div className="step">
+              <div className="num">04</div>
+              <h3>{t["pr.4h"]}</h3>
+              <p>{t["pr.4p"]}</p>
+              <span className="dur">{t["pr.4d"]}</span>
+            </div>
           </div>
         </div>
       </section>
