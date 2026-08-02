@@ -4,6 +4,9 @@ import { locales, localePath, htmlLang, defaultLocale, SITE_URL } from "@/lib/i1
 const PAGES: { path: string; priority: number }[] = [
   { path: "", priority: 1 },
   { path: "services", priority: 0.9 },
+  // Indexable, because a real legal page is a trust signal, but weighted low
+  // so it never competes with the two pages that matter.
+  { path: "legal", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

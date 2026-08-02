@@ -399,3 +399,22 @@ details.q p{color:var(--text-muted);font-size:14.5px;margin-top:12px;max-width:7
   .lang a{padding:0 7px;font-size:11px}
   .ctrls{gap:6px}
 }
+
+/* ---------- /legal ---------- */
+/* A reading page, not a marketing one: one narrow column, generous leading,
+   and no cards. The table of contents is a plain row of links so it collapses
+   sensibly on a phone. */
+.legal-hero{max-width:760px}
+.legal-hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.06;letter-spacing:-.035em;margin-top:22px}
+.legal-hero .lede{margin-top:18px}
+.legal-toc{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:34px;
+  padding-top:22px;border-top:1px solid var(--border)}
+.legal-toc .k{font-family:var(--font-display);font-size:12px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
+.legal-body{max-width:760px}
+.legal-body>.lede{margin-top:14px}
+.legal-item{margin-top:38px}
+.legal-item h3{font-size:19px;line-height:1.35;margin-bottom:10px}
+.legal-item p{color:var(--text-muted);line-height:1.75;margin-top:12px}
+.legal-item p:first-of-type{margin-top:0}
+.form-legal{font-size:13px;color:var(--text-muted);line-height:1.6;margin-top:-4px}

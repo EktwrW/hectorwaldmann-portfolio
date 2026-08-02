@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 /** Static bar heights for the GuardianAI waveform illustration. */
 const WAVE = [12,26,44,30,58,72,40,86,64,96,52,78,34,60,88,46,70,24,54,92,38,66,28,80,44,58,20,74,36,62,90,48,26,68,42,84,30,56,18,50];
 
-export default function ServicesSections({ t }: { t: Dict; locale: Locale }) {
+export default function ServicesSections({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <>
       <section style={{ paddingBottom: '0' }}>
@@ -458,7 +458,7 @@ export default function ServicesSections({ t }: { t: Dict; locale: Locale }) {
           <span className="eyebrow">{t["s.end.eyebrow"]}</span>
           <h2 className="h2">{t["s.end.h2"]}</h2>
           <p className="lede" style={{ margin: '16px auto 0' }}>{t["s.end.lede"]}</p>
-          <ContactForm t={t} variant="services" />
+          <ContactForm t={t} locale={locale} variant="services" />
           <p className="small muted" style={{ marginTop: '28px', maxWidth: '60ch', marginLeft: 'auto', marginRight: 'auto' }}>{t["s.end.notfit"]}</p>
         </div>
       </section>

@@ -1,11 +1,36 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import type { Dict } from "@/lib/dict.en";
+import { localePath, type Locale } from "@/lib/i18n";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mlgqwdvq";
 
 type Status = "idle" | "sending" | "sent" | "error";
+
+/**
+ * GDPR Article 13 asks that people be told what happens to their data at the
+ * moment they hand it over, not three clicks away, so this line sits directly
+ * above the submit button on both forms.
+ */
+const NOTICE: Record<Locale, { before: string; link: string; after: string }> = {
+  en: {
+    before: "What you send is used only to reply to you, never shared for marketing. ",
+    link: "How your data is handled",
+    after: ".",
+  },
+  es: {
+    before: "Lo que envías se usa solo para responderte, nunca se comparte con fines de marketing. ",
+    link: "Cómo se tratan tus datos",
+    after: ".",
+  },
+  pt: {
+    before: "O que envia é usado apenas para lhe responder, nunca é partilhado para fins de marketing. ",
+    link: "Como são tratados os seus dados",
+    after: ".",
+  },
+};
 
 /**
  * Both contact forms on the site. `home` shows the three intent chips above a
@@ -15,9 +40,11 @@ type Status = "idle" | "sending" | "sent" | "error";
  */
 export default function ContactForm({
   t,
+  locale,
   variant,
 }: {
   t: Dict;
+  locale: Locale;
   variant: "home" | "services";
 }) {
   const [status, setStatus] = useState<Status>("idle");
@@ -73,6 +100,17 @@ export default function ContactForm({
       </p>
     ) : null;
 
+  const notice = NOTICE[locale] ?? NOTICE.en;
+  const privacy = (
+    <p className="form-legal">
+      {notice.before}
+      <Link className="textlink" href={`${localePath(locale, "legal")}#privacy`}>
+        {notice.link}
+      </Link>
+      {notice.after}
+    </p>
+  );
+
   if (variant === "home") {
     return (
       <>
@@ -98,6 +136,7 @@ export default function ContactForm({
           </div>
           {honeypot}
           {error}
+          {privacy}
           <button className="btn btn-primary" type="submit" disabled={status === "sending"} style={{ justifySelf: "start" }}>
             <span>{status === "sending" ? t["form.sending"] : t["ct.send"]}</span> →
           </button>
@@ -141,6 +180,7 @@ export default function ContactForm({
       </div>
       {honeypot}
       {error}
+      {privacy}
       <button className="btn btn-primary" type="submit" disabled={status === "sending"} style={{ justifySelf: "start" }}>
         <span>{status === "sending" ? t["form.sending"] : t["s.end.send"]}</span> →
       </button>

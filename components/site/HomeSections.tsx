@@ -337,7 +337,7 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           <span className="eyebrow">{t["ct.eyebrow"]}</span>
           <h2 className="h2">{t["ct.h2"]}</h2>
           <p className="lede">{t["ct.lede"]}</p>
-          <ContactForm t={t} variant="home" />
+          <ContactForm t={t} locale={locale} variant="home" />
         </div>
       </section>
     </>

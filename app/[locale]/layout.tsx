@@ -138,7 +138,7 @@ export default function LocaleLayout({
         <div className="page">
           <SiteHeader t={t} locale={locale} />
           <main id="main">{children}</main>
-          <SiteFooter />
+          <SiteFooter locale={locale} />
         </div>
         <Analytics />
         <SpeedInsights />
