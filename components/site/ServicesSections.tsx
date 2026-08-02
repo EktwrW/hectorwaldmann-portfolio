@@ -262,6 +262,7 @@ export default function ServicesSections({ t, locale }: { t: Dict; locale: Local
                 <li>{t["s.pc.1a"]}</li>
                 <li>{t["s.pc.1b"]}</li>
                 <li>{t["s.pc.1c"]}</li>
+                <li>{t["s.pc.1e"]}</li>
                 <li>{t["s.pc.1d"]}</li>
               </ul>
             </div>

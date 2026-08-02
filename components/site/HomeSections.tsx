@@ -151,7 +151,28 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
         </div>
       </section>
-      <section>
+      <section id="foodly">
+        <div className="wrap">
+          <span className="eyebrow">{t["fo.eyebrow"]}</span>
+          <h2 className="h2">Foodly</h2>
+          <p className="lede">{t["fo.lede"]}</p>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '22px' }}>
+            <span className="pill">{t["fo.p1"]}</span>
+            <span className="pill">{t["fo.p2"]}</span>
+            <span className="pill">{t["fo.p3"]}</span>
+          </div>
+        </div>
+        <div className="marquee" style={{ marginTop: '44px' }}>
+          <ul className="marquee__track">
+            {[...SLIDES, ...SLIDES].map((n, i) => (
+              <li key={i}>
+                <img src={`/foodly/slide-0${n}.webp`} alt="" loading="lazy" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <section className="band-alt">
         <div className="wrap">
           <span className="eyebrow">{t["path.eyebrow"]}</span>
           <h2 className="h2">{t["path.h2"]}</h2>
@@ -230,27 +251,6 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
         </div>
       </section>
-      <section id="foodly" className="band-alt">
-        <div className="wrap">
-          <span className="eyebrow">{t["fo.eyebrow"]}</span>
-          <h2 className="h2">Foodly</h2>
-          <p className="lede">{t["fo.lede"]}</p>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '22px' }}>
-            <span className="pill">{t["fo.p1"]}</span>
-            <span className="pill">{t["fo.p2"]}</span>
-            <span className="pill">{t["fo.p3"]}</span>
-          </div>
-        </div>
-        <div className="marquee" style={{ marginTop: '44px' }}>
-          <ul className="marquee__track">
-            {[...SLIDES, ...SLIDES].map((n, i) => (
-              <li key={i}>
-                <img src={`/foodly/slide-0${n}.webp`} alt="" loading="lazy" />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
       <section className="band-soft">
         <div className="wrap">
           <span className="eyebrow">{t["pr.eyebrow"]}</span>
@@ -290,52 +290,20 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
         <div className="wrap">
           <span className="eyebrow">{t["sv.eyebrow"]}</span>
           <h2 className="h2">{t["sv.h2"]}</h2>
+          {/* Ordered by the client journey, not by key number: build → take
+              over → maintain → review → secure → extend with AI. */}
           <div className="rows">
-            <a className="row" href={svc}>
-              <span className="idx">01</span>
-              <div>
-                <h3>{t["sv.0h"]}</h3>
-                <p>{t["sv.0p"]}</p>
-              </div>
-              <span className="tags">{t["sv.0t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">02</span>
-              <div>
-                <h3>{t["sv.1h"]}</h3>
-                <p>{t["sv.1p"]}</p>
-              </div>
-              <span className="tags">{t["sv.1t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">03</span>
-              <div>
-                <h3>{t["sv.2h"]}</h3>
-                <p>{t["sv.2p"]}</p>
-              </div>
-              <span className="tags">{t["sv.2t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">04</span>
-              <div>
-                <h3>{t["sv.3h"]}</h3>
-                <p>{t["sv.3p"]}</p>
-              </div>
-              <span className="tags">{t["sv.3t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">05</span>
-              <div>
-                <h3>{t["sv.4h"]}</h3>
-                <p>{t["sv.4p"]}</p>
-              </div>
-              <span className="tags">{t["sv.4t"]}</span>
-              <span className="arw">→</span>
-            </a>
+            {(["sv.0", "sv.1", "sv.2", "sv.5", "sv.3", "sv.6", "sv.4"] as const).map((k, i) => (
+              <a className="row" href={svc} key={k}>
+                <span className="idx">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{t[`${k}h` as keyof Dict]}</h3>
+                  <p>{t[`${k}p` as keyof Dict]}</p>
+                </div>
+                <span className="tags">{t[`${k}t` as keyof Dict]}</span>
+                <span className="arw">→</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
