@@ -50,7 +50,8 @@ export default function ContactForm({
   const [status, setStatus] = useState<Status>("idle");
   const [intent, setIntent] = useState(0);
 
-  const intents = [t["ct.i1"], t["ct.i2"], t["ct.i3"]];
+  // Hiring first: the header "Contact" link is the recruiter entry point.
+  const intents = [t["ct.i3"], t["ct.i1"], t["ct.i2"]];
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();

@@ -30,7 +30,14 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
               →
             </a>
             <a className="btn btn-ghost" href="#foodly">{t["hero.cta2"]}</a>
-            <a className="textlink" href="/Hector_Waldman_CV.pdf">{t["hero.cta3"]}</a>
+            <a className="btn btn-quiet" href="/Hector_Waldman_CV.pdf" download>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3v12" />
+                <path d="m7 11 5 5 5-5" />
+                <path d="M4 20h16" />
+              </svg>
+              <span>{t["hero.cta3"]}</span>
+            </a>
           </div>
           <div className="avail">
             <span className="dot"></span>
@@ -191,59 +198,6 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
         </div>
       </section>
-      <section>
-        <div className="wrap">
-          <span className="eyebrow">{t["sv.eyebrow"]}</span>
-          <h2 className="h2">{t["sv.h2"]}</h2>
-          <div className="rows">
-            <a className="row" href={svc}>
-              <span className="idx">01</span>
-              <div>
-                <h3>{t["sv.0h"]}</h3>
-                <p>{t["sv.0p"]}</p>
-              </div>
-              <span className="tags">{t["sv.0t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">02</span>
-              <div>
-                <h3>{t["sv.1h"]}</h3>
-                <p>{t["sv.1p"]}</p>
-              </div>
-              <span className="tags">{t["sv.1t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">03</span>
-              <div>
-                <h3>{t["sv.2h"]}</h3>
-                <p>{t["sv.2p"]}</p>
-              </div>
-              <span className="tags">{t["sv.2t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">04</span>
-              <div>
-                <h3>{t["sv.3h"]}</h3>
-                <p>{t["sv.3p"]}</p>
-              </div>
-              <span className="tags">{t["sv.3t"]}</span>
-              <span className="arw">→</span>
-            </a>
-            <a className="row" href={svc}>
-              <span className="idx">05</span>
-              <div>
-                <h3>{t["sv.4h"]}</h3>
-                <p>{t["sv.4p"]}</p>
-              </div>
-              <span className="tags">{t["sv.4t"]}</span>
-              <span className="arw">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
       <section id="experience" className="band-alt">
         <div className="wrap">
           <span className="eyebrow">{t["ex.eyebrow"]}</span>
@@ -332,7 +286,60 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section>
+        <div className="wrap">
+          <span className="eyebrow">{t["sv.eyebrow"]}</span>
+          <h2 className="h2">{t["sv.h2"]}</h2>
+          <div className="rows">
+            <a className="row" href={svc}>
+              <span className="idx">01</span>
+              <div>
+                <h3>{t["sv.0h"]}</h3>
+                <p>{t["sv.0p"]}</p>
+              </div>
+              <span className="tags">{t["sv.0t"]}</span>
+              <span className="arw">→</span>
+            </a>
+            <a className="row" href={svc}>
+              <span className="idx">02</span>
+              <div>
+                <h3>{t["sv.1h"]}</h3>
+                <p>{t["sv.1p"]}</p>
+              </div>
+              <span className="tags">{t["sv.1t"]}</span>
+              <span className="arw">→</span>
+            </a>
+            <a className="row" href={svc}>
+              <span className="idx">03</span>
+              <div>
+                <h3>{t["sv.2h"]}</h3>
+                <p>{t["sv.2p"]}</p>
+              </div>
+              <span className="tags">{t["sv.2t"]}</span>
+              <span className="arw">→</span>
+            </a>
+            <a className="row" href={svc}>
+              <span className="idx">04</span>
+              <div>
+                <h3>{t["sv.3h"]}</h3>
+                <p>{t["sv.3p"]}</p>
+              </div>
+              <span className="tags">{t["sv.3t"]}</span>
+              <span className="arw">→</span>
+            </a>
+            <a className="row" href={svc}>
+              <span className="idx">05</span>
+              <div>
+                <h3>{t["sv.4h"]}</h3>
+                <p>{t["sv.4p"]}</p>
+              </div>
+              <span className="tags">{t["sv.4t"]}</span>
+              <span className="arw">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="band-alt">
         <div className="wrap">
           <span className="eyebrow">{t["ct.eyebrow"]}</span>
           <h2 className="h2">{t["ct.h2"]}</h2>

@@ -79,6 +79,10 @@ section{padding:var(--sp-section) 0}
 .btn-primary:hover{background:var(--accent-cta-hover);transform:translateY(-1px)}
 .btn-ghost{border-color:var(--border);background:transparent;color:var(--text)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-quiet{background:var(--accent-soft);color:var(--accent);padding:13px 20px}
+.btn-quiet:hover{background:var(--accent-soft);color:var(--accent-hover);
+  border-color:var(--accent);transform:translateY(-1px)}
+.btn-quiet svg{flex:none}
 .textlink{color:var(--text-muted);text-decoration:underline;text-underline-offset:4px;
   text-decoration-color:var(--border);font-size:15px}
 .textlink:hover{color:var(--accent);text-decoration-color:var(--accent)}
