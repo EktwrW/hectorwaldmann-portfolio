@@ -67,7 +67,6 @@ export const en = {
   "path.eyebrow": "Work with me",
   "path.h2": "Three ways I usually start.",
   "path.rec": "Hiring for a full-time or contract role?",
-  "path.rec1": "See the experience",
   "path.rec2": "Download CV",
   "pr.1d": "1 week",
   "pr.1h": "Scope",

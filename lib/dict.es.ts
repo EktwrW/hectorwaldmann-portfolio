@@ -68,7 +68,6 @@ export const es: Dict = {
   "path.eyebrow": "Trabajar conmigo",
   "path.h2": "Tres formas habituales de empezar.",
   "path.rec": "¿Buscas contratar para un puesto fijo o por contrato?",
-  "path.rec1": "Ver la experiencia",
   "path.rec2": "Descargar CV",
   "pr.1d": "1 semana",
   "pr.1h": "Alcance",

@@ -240,11 +240,9 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
           <div className="recruiter">
             <span>{t["path.rec"]}</span>
-            <a className="arrowlink" href="#experience">
-              <span>{t["path.rec1"]}</span>
-              <span>→</span>
-            </a>
-            <a className="arrowlink" href="/Hector_Waldman_CV.pdf">
+            {/* Only the CV: by this point the visitor has already scrolled past
+                the experience timeline, so a link back up to it is a dead end. */}
+            <a className="arrowlink" href="/Hector_Waldman_CV.pdf" download>
               <span>{t["path.rec2"]}</span>
               <span>→</span>
             </a>
