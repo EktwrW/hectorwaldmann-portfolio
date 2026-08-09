@@ -36,6 +36,26 @@ export default function SiteHeader({ t, locale }: { t: Dict; locale: Locale }) {
     if (current === "light" || current === "dark") setTheme(current);
   }, []);
 
+  // Escape is the expected way out of an overlay for anyone on a keyboard.
+  useEffect(() => {
+    if (!open) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") closeMenu();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  // A real page change (not a hash jump) should leave the menu behind.
+  useEffect(() => {
+    closeMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
+  function closeMenu() {
+    setOpen(false);
+  }
+
   function toggleTheme() {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
@@ -113,10 +133,11 @@ export default function SiteHeader({ t, locale }: { t: Dict; locale: Locale }) {
           </div>
         </div>
       </header>
+      {open && <div className="mnav-scrim" onClick={closeMenu} aria-hidden="true" />}
       <div className={open ? "mnav is-open" : "mnav"}>
         <div className="wrap">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <Link key={l.href} href={l.href} onClick={closeMenu}>
               {l.label}
             </Link>
           ))}

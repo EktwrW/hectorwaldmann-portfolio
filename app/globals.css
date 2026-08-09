@@ -225,6 +225,21 @@ section{padding:var(--sp-section) 0}
 .tl-item .org{font-size:14px;color:var(--accent);margin-top:3px}
 .tl-item p{font-size:14.5px;color:var(--text-muted);margin-top:9px;max-width:64ch}
 
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
+.about__quote{margin:0;padding:26px}
+.about__quote blockquote{margin:0;font-family:var(--font-display);font-size:18px;line-height:1.4}
+.about__quote figcaption{margin-top:14px}
+@media (max-width:960px){
+  /* One column on a phone. The quote also sheds its card chrome: at full
+     width the border and shadow read as a second panel competing with the
+     prose, where the point of it is to support that prose. */
+  .about{grid-template-columns:1fr;gap:30px}
+  .about__quote{background:transparent;border:0;border-left:2px solid var(--accent);
+    border-radius:0;box-shadow:none;padding:2px 0 2px 20px}
+  .about__quote blockquote{font-size:19px}
+}
+
 /* ---------- skills columns ---------- */
 .cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:44px}
 @media (max-width:860px){ .cols4{grid-template-columns:1fr 1fr;gap:30px} }
@@ -358,14 +373,36 @@ details.q p{color:var(--text-muted);font-size:14.5px;margin-top:12px;max-width:7
   border-radius:var(--r-pill);background:var(--bg-alt);color:var(--text-muted);
   cursor:pointer;place-items:center;font-size:15px;line-height:1}
 @media (max-width:900px){ .burger{display:grid} }
-.mnav{display:none;border-bottom:1px solid var(--border);background:var(--header-bg);
-  backdrop-filter:blur(14px)}
+/* The panel is fixed, not in normal flow. In flow it scrolled away with the
+   page, so an open menu could sit entirely above the fold - the options have
+   to stay on screen for as long as the menu is open, wherever the reader is.
+   Solid rather than frosted like the header: a translucent panel over body
+   copy is legible on a hero and much less so over a dense section. */
+.mnav{position:fixed;top:var(--header-h);left:0;right:0;z-index:59;display:none;
+  max-height:calc(100vh - var(--header-h));max-height:calc(100dvh - var(--header-h));
+  overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;background:var(--bg);
+  border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
 .mnav.is-open{display:block}
-@media (min-width:901px){ .mnav{display:none} }
+/* Both selectors, so a phone rotated to a tablet width with the menu already
+   open does not leave the panel stranded next to the desktop nav. */
+@media (min-width:901px){ .mnav, .mnav.is-open{display:none} }
 .mnav .wrap{display:flex;flex-direction:column;padding-top:6px;padding-bottom:14px}
 .mnav a{padding:13px 0;border-bottom:1px solid var(--border);font-size:15.5px;
   color:var(--text);font-family:var(--font-display);font-weight:500;text-decoration:none}
 .mnav a:last-child{border-bottom:0}
+
+/* Dims the page and gives the whole area below the panel a tap target for
+   closing, which is where a thumb naturally goes to dismiss a menu.
+   Its touch-action also freezes the page: a swipe that starts anywhere under
+   the header is swallowed here instead of scrolling the article away.
+   Deliberately not `overflow:hidden` on the document - that makes the sticky
+   header fall back to its static position, which on a scrolled page means the
+   header, and with it the close button, disappears off the top. */
+.mnav-scrim{position:fixed;inset:var(--header-h) 0 0;z-index:58;touch-action:none;
+  background:rgba(6,10,15,.42);animation:scrim-in .18s ease}
+@keyframes scrim-in{from{opacity:0}to{opacity:1}}
+@media (min-width:901px){ .mnav-scrim{display:none} }
+@media (prefers-reduced-motion:reduce){ .mnav-scrim{animation:none} }
 
 /* Language switcher rendered as links rather than buttons */
 .lang a{display:inline-flex;align-items:center;height:100%;padding:0 11px;

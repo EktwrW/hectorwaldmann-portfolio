@@ -138,17 +138,20 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
         </div>
       </section>
       <section id="about" className="band-alt">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 300px', gap: '56px', alignItems: 'start' }}>
+        {/* The layout lives in .about (globals.css) rather than in an inline
+            style, because inline styles cannot carry a media query and this
+            grid has to collapse to one column on a phone. */}
+        <div className="wrap about">
           <div>
             <span className="eyebrow">{t["ab.eyebrow"]}</span>
             <h2 className="h2">{t["ab.h2"]}</h2>
             <p className="lede">{t["ab.p1"]}</p>
             <p className="lede">{t["ab.p2"]}</p>
           </div>
-          <div className="card" style={{ padding: '26px' }}>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: '18px', lineHeight: '1.4' }}>{t["ab.quote"]}</p>
-            <p className="small muted" style={{ marginTop: '14px' }}>{t["ab.quotesub"]}</p>
-          </div>
+          <figure className="card about__quote">
+            <blockquote>{t["ab.quote"]}</blockquote>
+            <figcaption className="small muted">{t["ab.quotesub"]}</figcaption>
+          </figure>
         </div>
       </section>
       <section id="foodly">
