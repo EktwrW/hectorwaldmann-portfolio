@@ -60,10 +60,27 @@ export function personGraph(locale: Locale) {
           "https://github.com/EktwrW",
           "https://theorg.com/org/get-a-head/org-chart/hector-waldman",
         ],
+        /**
+         * Google removed the country-targeting setting from Search Console in
+         * 2022, so the only geographic signals left are hreflang and this.
+         * Country level on purpose: a freelancer's street address does not
+         * belong in public structured data.
+         */
+        homeLocation: {
+          "@type": "Place",
+          address: { "@type": "PostalAddress", addressCountry: "PT" },
+        },
+        workLocation: {
+          "@type": "Place",
+          name: "Remote, from Portugal",
+          address: { "@type": "PostalAddress", addressCountry: "PT" },
+        },
         areaServed: [
+          { "@type": "Country", name: "Portugal" },
+          { "@type": "Country", name: "Spain" },
+          { "@type": "Place", name: "Europe" },
           { "@type": "Country", name: "United States" },
           { "@type": "Country", name: "Canada" },
-          { "@type": "Place", name: "Europe" },
           { "@type": "Place", name: "Latin America" },
         ],
       },
