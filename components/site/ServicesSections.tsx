@@ -1,9 +1,7 @@
 import type { Dict } from "@/lib/dict.en";
 import type { Locale } from "@/lib/i18n";
 import ContactForm from "./ContactForm";
-
-/** Static bar heights for the GuardianAI waveform illustration. */
-const WAVE = [12,26,44,30,58,72,40,86,64,96,52,78,34,60,88,46,70,24,54,92,38,66,28,80,44,58,20,74,36,62,90,48,26,68,42,84,30,56,18,50];
+import { LINKS } from "@/lib/work";
 
 export default function ServicesSections({ t, locale }: { t: Dict; locale: Locale }) {
   return (
@@ -208,27 +206,27 @@ export default function ServicesSections({ t, locale }: { t: Dict; locale: Local
               <div className="body">
                 <h3>Foodly</h3>
                 <p className="lede" style={{ fontSize: '15px' }}>{t["s.pf.foodly"]}</p>
+                {/* Real links: "work you can open and check" has to be openable. */}
                 <div style={{ display: 'flex', gap: '10px', marginTop: '18px', flexWrap: 'wrap' }}>
-                  <span className="pill">App Store</span>
-                  <span className="pill">Google Play</span>
+                  <a className="pill pill-link" href={LINKS.foodlyIos} target="_blank" rel="noopener">App Store ↗</a>
+                  <a className="pill pill-link" href={LINKS.foodlyAndroid} target="_blank" rel="noopener">Google Play ↗</a>
+                  <a className="pill pill-link" href={LINKS.foodlyWeb} target="_blank" rel="noopener">foodly.solutions ↗</a>
                 </div>
               </div>
             </article>
             <article className="card pathcard">
-              <div style={{ minHeight: '280px', display: 'grid', placeItems: 'center', padding: '40px', background: 'var(--bg-alt)' }}>
-                <div className="wave" aria-hidden="true" style={{ width: "100%" }}>
-                  {WAVE.map((h, i) => (
-                    <i key={i} style={{ height: `${h}%` }} />
-                  ))}
-                </div>
-              </div>
+              {/* GuardianAI used to sit here, but the platform it shipped into
+                  is offline, so it could not be opened or checked. */}
+              <a className="gfx-shot" href={LINKS.wenekaton} target="_blank" rel="noopener" tabIndex={-1} aria-hidden="true">
+                <img src="/work/wenekaton-site.webp" alt="" loading="lazy" width={1440} height={900} />
+              </a>
               <div className="body">
-                <h3>GuardianAI</h3>
-                <p className="lede" style={{ fontSize: '15px' }}>{t["s.pf.guardian"]}</p>
+                <h3>WenekaTón</h3>
+                <p className="lede" style={{ fontSize: '15px' }}>{t["s.pf.weneka"]}</p>
                 <div style={{ display: 'flex', gap: '10px', marginTop: '18px', flexWrap: 'wrap' }}>
-                  <span className="pill">Voice AI</span>
-                  <span className="pill">NLP</span>
-                  <span className="pill">Cloud Run</span>
+                  <a className="pill pill-link" href={LINKS.wenekaton} target="_blank" rel="noopener">wenekaton.com ↗</a>
+                  <span className="pill">Astro</span>
+                  <span className="pill">AI · voice</span>
                 </div>
               </div>
             </article>

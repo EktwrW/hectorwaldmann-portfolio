@@ -22,17 +22,42 @@ const BODY = `# Hector Waldman
 
 Available now for full-time, contract and freelance work, remote from Portugal
 with overlap into Europe, the United States and Latin America. Six years
-shipping production apps to the App Store and Google Play.
+shipping production apps to the App Store, Google Play and the web.
 
-Most recently Flutter architect at a mental-health platform, where he built the
-design system every app in the company runs on and a real-time voice AI pipeline
-delivered as an embeddable SDK. Built and launched Foodly, a marketplace live on
-both stores, alone: Flutter clients, Laravel API, PostgreSQL, cloud
-infrastructure and both store listings.
+## Work
+
+- Foodly (own product, 2024 to now): a platform for local food businesses —
+  QR menus from a photo, ordering at the table with a split bill, bookings,
+  catering quotes, promotions and a web panel for the business. Flutter for
+  iOS, Android and Web, Laravel and PostgreSQL on Google Cloud Run, Stripe.
+  Version 2.3.0, October 2026.
+  [App Store](https://apps.apple.com/us/app/foodly-solutions-qr-menu/id6761689908) ·
+  [Google Play](https://play.google.com/store/apps/details?id=com.foodlysolutions.app) ·
+  [Web](https://foodly.solutions/)
+- WenekaTón (client, September–October 2026): four-language booking site for a
+  Pemón-community tour operator at Angel Falls, Venezuela. Astro, TypeScript and
+  Tailwind on Cloudflare Workers; an AI assistant (Claude API) that answers only
+  from the site's catalogue; one inbox for web chat and email with translation
+  both ways. [wenekaton.com](https://wenekaton.com/)
+- Votiva (own product, September 2026 to now): an AI prayer companion for iOS and
+  Android in Spanish, English and Portuguese — guided prayers with Bible verses
+  and narrated audio. Flutter, FastAPI on Cloud Run, Claude, RevenueCat. Coming
+  soon to the App Store and Google Play. [getvotiva.com](https://getvotiva.com/)
+- GoTribe Fitness (Band of Coders, 2021–2022): built from scratch in Flutter
+  and BLoC over GraphQL, with multi-device Bluetooth LE heart-rate streaming.
+  [App Store](https://apps.apple.com/us/app/gotribe-fitness/id6747635444) ·
+  [Google Play](https://play.google.com/store/apps/details?id=com.gotribe.app)
+- Keel Mind (January 2022 to July 2026): Flutter architect and senior front-end
+  on a multi-tenant mental-health platform — the company-wide Flutter design
+  system, 1.5 GB uploads on Flutter Web, and GuardianAI, a real-time voice agent
+  shipped as an embeddable SDK. Through Band of Coders until August 2024, then a
+  direct contract. Those platforms are no longer online.
+- Essentiel Outsourcing (now, part-time): IT support specialist in Spain —
+  systems, CRM and call-centre telephony configuration.
 
 ## Pages
 
-- [Home](${SITE_URL}/): who he is, the experience timeline, the stack and how to get in touch.
+- [Home](${SITE_URL}/): the work, one project at a time, then the timeline, the stack and how to get in touch.
 - [Services and pricing](${SITE_URL}/services): the fixed-price engagements, what each one includes and what it costs.
 - [Legal](${SITE_URL}/legal): terms of service and privacy policy.
 
@@ -51,7 +76,7 @@ infrastructure and both store listings.
 ## Stack
 
 Flutter, Dart, BLoC, Clean Architecture, design systems, React, React Native,
-Next.js, TypeScript, Node.js, Laravel, PHP, PostgreSQL, Firebase, Google Cloud,
+Next.js, Astro, TypeScript, Node.js, Laravel, PHP, PostgreSQL, Firebase, Google Cloud,
 AWS, CI/CD, App Store and Google Play releases, and AI integration including
 voice agents and natural language processing.
 
@@ -60,10 +85,6 @@ voice agents and natural language processing.
 - Email: hector@hectorwaldmann.site
 - [LinkedIn](https://www.linkedin.com/in/ektwr/)
 - [GitHub](https://github.com/EktwrW)
-
-## Optional
-
-- [Foodly](https://foodly.solutions/): the marketplace he designed, built, launched and maintains on his own. Live on Google Play and the App Store.
 `;
 
 export function GET() {

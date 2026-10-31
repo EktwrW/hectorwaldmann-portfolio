@@ -80,9 +80,9 @@ export default function SiteHeader({ t, locale }: { t: Dict; locale: Locale }) {
 
   // Same order as the sections on the home page.
   const links = [
-    { href: `${home}#experience`, label: t["nav.exp"] },
+    { href: `${home}#work`, label: t["nav.work"] },
     { href: `${home}#about`, label: t["nav.about"] },
-    { href: `${home}#foodly`, label: t["nav.foodly"] },
+    { href: `${home}#experience`, label: t["nav.exp"] },
     { href: svc, label: t["nav.services"], primary: true },
     { href: `${home}#contact`, label: t["nav.contact"] },
   ];

@@ -33,6 +33,7 @@ export function personGraph(locale: Locale) {
           "PostgreSQL",
           "React",
           "Next.js",
+          "Astro",
           "TypeScript",
           "Node.js",
           "Python",
@@ -82,6 +83,22 @@ export function personGraph(locale: Locale) {
           { "@type": "Country", name: "United States" },
           { "@type": "Country", name: "Canada" },
           { "@type": "Place", name: "Latin America" },
+        ],
+      },
+      {
+        // His own product, live on both stores. Linked to the Person as author
+        // so the entity and the store listings reinforce each other.
+        "@type": "SoftwareApplication",
+        "@id": `${SITE_URL}/#foodly`,
+        name: "Foodly",
+        url: "https://foodly.solutions/",
+        applicationCategory: "Food & Drink",
+        operatingSystem: "iOS, Android, Web",
+        softwareVersion: "2.3.0",
+        author: { "@id": `${SITE_URL}/#person` },
+        sameAs: [
+          "https://apps.apple.com/us/app/foodly-solutions-qr-menu/id6761689908",
+          "https://play.google.com/store/apps/details?id=com.foodlysolutions.app",
         ],
       },
       {

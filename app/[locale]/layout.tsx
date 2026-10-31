@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Manrope } from "next/font/google";
+import { Space_Grotesk, Manrope, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { notFound } from "next/navigation";
@@ -20,6 +20,23 @@ const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-manrope",
+  display: "swap",
+});
+
+// The cinematic layer: an editorial serif for titles and a mono for the
+// "release notes" details (versions, dates, stacks).
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -124,7 +141,7 @@ export default function LocaleLayout({
     <html
       lang={htmlLang[locale]}
       data-theme="dark"
-      className={`${spaceGrotesk.variable} ${manrope.variable}`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
