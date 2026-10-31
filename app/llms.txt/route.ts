@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/i18n";
+import { en } from "@/lib/dict.en";
 
 /**
  * /llms.txt — a plain-text summary of the site for language models.
@@ -13,7 +14,15 @@ import { SITE_URL } from "@/lib/i18n";
  */
 export const dynamic = "force-static";
 
+// The same answers as the "Quick answers" section on the home page, so the
+// two can never drift apart.
+const QA = ([1, 2, 3, 4, 5, 6] as const)
+  .map((n) => `### ${en[`hq.q${n}`]}\n\n${en[`hq.a${n}`]}`)
+  .join("\n\n");
+
 const BODY = `# Hector Waldman
+
+Also written Hector Waldmann or Héctor Waldman. Independent studio: Apps 369.
 
 > Senior Flutter architect and full-stack engineer based in Portugal. Builds
 > cross-platform apps for iOS, Android and Web from a single codebase, and takes
@@ -54,6 +63,10 @@ shipping production apps to the App Store, Google Play and the web.
   direct contract. Those platforms are no longer online.
 - Essentiel Outsourcing (now, part-time): IT support specialist in Spain —
   systems, CRM and call-centre telephony configuration.
+
+## Common questions
+
+${QA}
 
 ## Pages
 

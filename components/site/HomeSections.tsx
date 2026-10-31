@@ -8,6 +8,7 @@ import ChapterRail from "./home/ChapterRail";
 
 const SLIDES = [1, 2, 3, 4, 5, 6, 7, 8];
 const GOTRIBE = [1, 2, 3, 4].map((n) => `/work/gotribe-0${n}.webp`);
+const QA = [1, 2, 3, 4, 5, 6] as const;
 
 function AppleIcon() {
   return (
@@ -473,6 +474,39 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ---------------- quick answers ----------------
+          Written answer-first, one self-contained answer per question, because
+          this is the shape AI assistants lift into their replies. The same
+          text is published as FAQPage data just below. */}
+      <section id="answers" className="answers">
+        <div className="wrap">
+          <span className="eyebrow">{t["hq.eyebrow"]}</span>
+          <h2 className="h2">{t["hq.h2"]}</h2>
+          <dl className="qa">
+            {QA.map((n) => (
+              <div key={n}>
+                <dt>{t[`hq.q${n}`]}</dt>
+                <dd>{t[`hq.a${n}`]}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: QA.map((n) => ({
+                "@type": "Question",
+                name: t[`hq.q${n}`],
+                acceptedAnswer: { "@type": "Answer", text: t[`hq.a${n}`] },
+              })),
+            }),
+          }}
+        />
       </section>
 
       <section id="contact" className="band-alt">

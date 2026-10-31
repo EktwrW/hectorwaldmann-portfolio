@@ -767,3 +767,10 @@ details.q p{color:var(--text-muted);font-size:14.5px;margin-top:12px;max-width:7
   .stage--votiva .prayer{flex-basis:64%;min-height:280px;padding:28px 20px}
   .stage--votiva .prayer blockquote{font-size:24px}
 }
+
+/* ---------- quick answers ---------- */
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin:44px 0 0}
+.qa > div{padding:26px 0;border-top:1px solid var(--border)}
+.qa dt{font-family:var(--font-serif);font-size:clamp(22px,2vw,27px);line-height:1.2;letter-spacing:-.01em}
+.qa dd{margin:12px 0 0;color:var(--text-muted);font-size:15.5px;line-height:1.7}
+@media (max-width:860px){ .qa{grid-template-columns:1fr} }

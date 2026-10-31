@@ -16,6 +16,10 @@ export function personGraph(locale: Locale) {
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
         name: "Hector Waldman",
+        // The domain, LinkedIn and most profiles spell it with two n's; the CV
+        // and this site with one. Naming both lets search engines and
+        // assistants treat them as the same person.
+        alternateName: ["Hector Waldmann", "Héctor Waldman", "Héctor Waldmann"],
         url: SITE_URL,
         image: `${SITE_URL}/og-image.png`,
         jobTitle: "Senior Flutter Architect & Full-Stack Engineer",
@@ -48,6 +52,7 @@ export function personGraph(locale: Locale) {
           { "@type": "Language", name: "Portuguese" },
         ],
         brand: { "@type": "Brand", name: "Apps 369" },
+        worksFor: { "@id": `${SITE_URL}/#apps369` },
         hasOccupation: {
           "@type": "Occupation",
           name: "Senior Flutter Architect & Full-Stack Engineer",
@@ -86,6 +91,17 @@ export function personGraph(locale: Locale) {
         ],
       },
       {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#apps369`,
+        name: "Apps 369",
+        url: SITE_URL,
+        logo: `${SITE_URL}/apps369-iso.png`,
+        description:
+          "Independent studio of Hector Waldman: his own apps (Foodly, Votiva) and app, web and AI development for clients.",
+        founder: { "@id": `${SITE_URL}/#person` },
+        address: { "@type": "PostalAddress", addressCountry: "PT" },
+      },
+      {
         // His own product, live on both stores. Linked to the Person as author
         // so the entity and the store listings reinforce each other.
         "@type": "SoftwareApplication",
@@ -96,6 +112,7 @@ export function personGraph(locale: Locale) {
         operatingSystem: "iOS, Android, Web",
         softwareVersion: "2.3.0",
         author: { "@id": `${SITE_URL}/#person` },
+        publisher: { "@id": `${SITE_URL}/#apps369` },
         sameAs: [
           "https://apps.apple.com/us/app/foodly-solutions-qr-menu/id6761689908",
           "https://play.google.com/store/apps/details?id=com.foodlysolutions.app",
