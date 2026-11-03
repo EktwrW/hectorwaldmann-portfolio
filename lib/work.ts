@@ -22,6 +22,7 @@ export const LINKS = {
   gotribeIos: "https://apps.apple.com/us/app/gotribe-fitness/id6747635444",
   gotribeAndroid: "https://play.google.com/store/apps/details?id=com.gotribe.app",
   bandOfCoders: "https://www.bandofcoders.com/",
+  essentiel: "https://essentiel-outsourcing.com/",
   universo: "https://universodecreadores.com/",
   linkedin: "https://www.linkedin.com/in/ektwr/",
   linkedinRecs: "https://www.linkedin.com/in/ektwr/details/recommendations/",
@@ -139,7 +140,7 @@ const en: Work = {
     eyebrow: "Credits",
     h2: "Six years, in order.",
     items: [
-      { when: "Now · part-time", role: "IT support specialist", org: "Essentiel Outsourcing", note: "Spain. Helping the operation scale: systems, CRM and call-centre telephony (PBX) configuration." },
+      { when: "Sep 2026 — now · freelance", role: "IT support specialist", org: "Essentiel Outsourcing", note: "Barcelona. A multilingual call-centre and BPO company with sites in Spain, Portugal, Mexico and Tunisia: security hardening, UI/UX of internal tools, simpler processes, automations, and CRM and call-centre telephony.", link: { label: "essentiel-outsourcing.com", href: LINKS.essentiel } },
       { when: "2024 — now", role: "Founder & engineer", org: "Apps 369", note: "Foodly and Votiva, my own products, and client work such as WenekaTón." },
       { when: "Jan 2022 — Jul 2026", role: "Flutter architect & senior front-end", org: "Keel Mind", note: "Through Band of Coders until Aug 2024, then a direct contract." },
       { when: "Feb 2021 — Jan 2022", role: "Flutter developer", org: "Band of Coders LLC", note: "Atlanta, USA. GoTribe Fitness, built from scratch." },
@@ -235,7 +236,7 @@ const es: Work = {
     eyebrow: "Créditos",
     h2: "Seis años, en orden.",
     items: [
-      { when: "Hoy · jornada parcial", role: "Especialista de soporte IT", org: "Essentiel Outsourcing", note: "España. Ayudo a escalar la operación: sistemas, CRM y configuración de la telefonía del centro de llamadas (centralitas)." },
+      { when: "sep 2026 — hoy · freelance", role: "Especialista de soporte IT", org: "Essentiel Outsourcing", note: "Barcelona. Una empresa multilingüe de call center y BPO con sedes en España, Portugal, México y Túnez: refuerzo de la seguridad, UI/UX de herramientas internas, procesos más simples, automatizaciones, y CRM y telefonía del centro de llamadas.", link: { label: "essentiel-outsourcing.com", href: LINKS.essentiel } },
       { when: "2024 — hoy", role: "Fundador e ingeniero", org: "Apps 369", note: "Foodly y Votiva, mis productos propios, y trabajo para clientes como WenekaTón." },
       { when: "ene 2022 — jul 2026", role: "Arquitecto Flutter y front-end sénior", org: "Keel Mind", note: "A través de Band of Coders hasta ago 2024, luego contrato directo." },
       { when: "feb 2021 — ene 2022", role: "Desarrollador Flutter", org: "Band of Coders LLC", note: "Atlanta, EE. UU. GoTribe Fitness, construida desde cero." },
@@ -331,7 +332,7 @@ const pt: Work = {
     eyebrow: "Créditos",
     h2: "Seis anos, por ordem.",
     items: [
-      { when: "Hoje · tempo parcial", role: "Especialista de suporte IT", org: "Essentiel Outsourcing", note: "Espanha. Ajudo a escalar a operação: sistemas, CRM e configuração da telefonia do call center (centrais telefónicas)." },
+      { when: "set 2026 — hoje · freelance", role: "Especialista de suporte IT", org: "Essentiel Outsourcing", note: "Barcelona. Uma empresa multilingue de call center e BPO com operações em Espanha, Portugal, México e Tunísia: reforço da segurança, UI/UX de ferramentas internas, processos mais simples, automatizações, e CRM e telefonia do call center.", link: { label: "essentiel-outsourcing.com", href: LINKS.essentiel } },
       { when: "2024 — hoje", role: "Fundador e engenheiro", org: "Apps 369", note: "Foodly e Votiva, os meus produtos próprios, e trabalho para clientes como a WenekaTón." },
       { when: "jan 2022 — jul 2026", role: "Arquiteto Flutter e front-end sénior", org: "Keel Mind", note: "Através da Band of Coders até ago 2024, depois contrato direto." },
       { when: "fev 2021 — jan 2022", role: "Programador Flutter", org: "Band of Coders LLC", note: "Atlanta, EUA. GoTribe Fitness, construída de raiz." },

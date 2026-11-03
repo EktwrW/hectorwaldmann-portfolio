@@ -125,7 +125,7 @@ export const en = {
   "s.end.o4": "Something else",
   "s.end.send": "Request a 30-minute call",
   "s.eyebrow": "Services",
-  "s.faq.a1": "I also do part-time IT support for a company in Spain, so I take at most two client engagements at a time, 15–20 hours a week each, and that commitment goes in the contract along with response times. If I cannot meet it, I say no at the first call rather than take your deposit.",
+  "s.faq.a1": "I also do freelance IT work for a call-centre company in Spain, so I take at most two client engagements at a time, 15–20 hours a week each, and that commitment goes in the contract along with response times. If I cannot meet it, I say no at the first call rather than take your deposit.",
   "s.faq.a2": "You do, from day one. The repository lives in your GitHub organisation, the cloud runs in your account, and the store listings are under your developer account. I get access; you get ownership.",
   "s.faq.a3": "14 days' written notice, from either side, for any reason. You keep everything produced up to that point, documented. I would rather you leave able to hire anyone than leave stuck with me.",
   "s.faq.a4": "Correct, and I won’t invent any. Most of my earlier work was under employment or NDA. What you can check yourself: Foodly, my own product, live on both stores; WenekaTón, a client site live in four languages; and GoTribe Fitness, on both stores. Ask me for a reference from a former colleague or client and I will give you one.",

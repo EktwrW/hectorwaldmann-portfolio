@@ -63,8 +63,10 @@ shipping production apps to the App Store, Google Play and the web.
   system, 1.5 GB uploads on Flutter Web, and GuardianAI, a real-time voice agent
   shipped as an embeddable SDK. Through Band of Coders until August 2024, then a
   direct contract. Those platforms are no longer online.
-- Essentiel Outsourcing (now, part-time): IT support specialist in Spain —
-  systems, CRM and call-centre telephony configuration.
+- Essentiel Outsourcing (September 2026 to now, freelance): IT support
+  specialist for a multilingual call-centre and BPO company based in Barcelona —
+  security hardening, UI/UX of internal tools, process simplification,
+  automations, CRM and call-centre telephony. [essentiel-outsourcing.com](https://essentiel-outsourcing.com/)
 
 ## Common questions
 

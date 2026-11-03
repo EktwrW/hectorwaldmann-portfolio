@@ -126,7 +126,7 @@ export const es: Dict = {
   "s.end.o4": "Otra cosa",
   "s.end.send": "Solicitar una llamada de 30 minutos",
   "s.eyebrow": "Servicios",
-  "s.faq.a1": "También doy soporte IT a jornada parcial a una empresa en España, por eso acepto como máximo dos proyectos de cliente a la vez, de 15 a 20 horas semanales cada uno, y ese compromiso va en el contrato junto con los tiempos de respuesta. Si no puedo cumplirlo, digo que no en la primera llamada en lugar de cobrar tu anticipo.",
+  "s.faq.a1": "También hago trabajos puntuales de IT como freelance para una empresa de call center en España, por eso acepto como máximo dos proyectos de cliente a la vez, de 15 a 20 horas semanales cada uno, y ese compromiso va en el contrato junto con los tiempos de respuesta. Si no puedo cumplirlo, digo que no en la primera llamada en lugar de cobrar tu anticipo.",
   "s.faq.a2": "Tuyo, desde el primer día. El repositorio vive en tu organización de GitHub, la nube corre en tu cuenta y las fichas de tienda están bajo tu cuenta de desarrollador. Yo tengo acceso; tú tienes la propiedad.",
   "s.faq.a3": "Preaviso escrito de 14 días, por cualquiera de las dos partes y por cualquier motivo. Te quedas con todo lo producido hasta ese punto, documentado. Prefiero que te vayas pudiendo contratar a quien quieras a que te quedes atrapado conmigo.",
   "s.faq.a4": "Correcto, y no voy a inventarlos. La mayor parte de mi trabajo anterior fue en relación laboral o bajo NDA. Lo que sí puedes comprobar tú mismo: Foodly, mi producto, en ambas tiendas; WenekaTón, un sitio de cliente en línea en cuatro idiomas; y GoTribe Fitness, en ambas tiendas. Pídeme una referencia de un antiguo compañero o cliente y te la doy.",
