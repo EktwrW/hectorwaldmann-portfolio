@@ -259,7 +259,7 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
                 <Out href={LINKS.votivaIos} className="cbtn cbtn--solid" hint={`App Store — ${w.open}`}>
                   <AppleIcon /> App Store
                 </Out>
-                <Out href={LINKS.votiva} hint={w.open}>
+                <Out href={w.votiva.site} hint={w.open}>
                   {w.votiva.visit}
                 </Out>
                 <span className="status">
@@ -275,7 +275,7 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
               </figure>
               <figure className="prayer">
                 <span className="prayer__mark" aria-hidden="true">✦</span>
-                <blockquote lang="es">{w.votiva.card}</blockquote>
+                <blockquote>{w.votiva.card}</blockquote>
                 <figcaption>{w.votiva.cardSub}</figcaption>
               </figure>
             </div>

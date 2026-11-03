@@ -41,7 +41,7 @@ export type Work = {
     web: string; panelCap: string; phoneCap: string; stripCap: string;
   };
   wenekaton: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; visit: string };
-  votiva: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; status: string; card: string; cardSub: string; visit: string; clipCap: string; stripCap: string };
+  votiva: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; status: string; card: string; cardSub: string; visit: string; site: string; clipCap: string; stripCap: string };
   gotribe: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; agency: string };
   keel: { kicker: string; tagline: string; p1: string; notes: CaseNote[]; note: string; recs: string };
   credits: { eyebrow: string; h2: string; items: Credit[]; stackH: string; stack: { k: string; v: string }[] };
@@ -102,9 +102,10 @@ const en: Work = {
       { k: "Languages", v: "ES · EN · PT" },
     ],
     status: "Google Play · coming soon",
-    card: "“Una oración para lo que estás viviendo.”",
-    cardSub: "getvotiva.com · iOS · Android",
+    card: "“A prayer for what you’re living through.”",
+    cardSub: "getvotiva.com · App Store · Google Play soon",
     visit: "getvotiva.com",
+    site: "https://getvotiva.com/en",
     clipCap: "Mood footage from the launch campaign",
     stripCap: "The App Store listing",
   },
@@ -198,8 +199,9 @@ const es: Work = {
     ],
     status: "Google Play · muy pronto",
     card: "“Una oración para lo que estás viviendo.”",
-    cardSub: "getvotiva.com · iOS · Android",
+    cardSub: "getvotiva.com · App Store · Google Play pronto",
     visit: "getvotiva.com",
+    site: "https://getvotiva.com/",
     clipCap: "Imágenes de la campaña de lanzamiento",
     stripCap: "La ficha en App Store",
   },
@@ -292,9 +294,10 @@ const pt: Work = {
       { k: "Idiomas", v: "ES · EN · PT" },
     ],
     status: "Google Play · brevemente",
-    card: "“Una oración para lo que estás viviendo.”",
-    cardSub: "getvotiva.com · iOS · Android",
+    card: "“Uma oração para o que estás a viver.”",
+    cardSub: "getvotiva.com · App Store · Google Play em breve",
     visit: "getvotiva.com",
+    site: "https://getvotiva.com/pt",
     clipCap: "Imagens da campanha de lançamento",
     stripCap: "A ficha na App Store",
   },
