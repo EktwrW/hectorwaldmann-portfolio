@@ -9,6 +9,7 @@ import ChapterRail from "./home/ChapterRail";
 const SLIDES = [1, 2, 3, 4, 5, 6, 7, 8];
 const GOTRIBE = [1, 2, 3, 4].map((n) => `/work/gotribe-0${n}.webp`);
 const QA = [1, 2, 3, 4, 5, 6] as const;
+const VOTIVA = [1, 2, 3, 4, 5, 6].map((n) => `/work/votiva-0${n}.webp`);
 
 function AppleIcon() {
   return (
@@ -255,13 +256,16 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
               <p className="body">{w.votiva.p2}</p>
               <Facts facts={w.votiva.facts} />
               <div className="links">
+                <Out href={LINKS.votivaIos} className="cbtn cbtn--solid" hint={`App Store — ${w.open}`}>
+                  <AppleIcon /> App Store
+                </Out>
+                <Out href={LINKS.votiva} hint={w.open}>
+                  {w.votiva.visit}
+                </Out>
                 <span className="status">
                   <i aria-hidden="true" />
                   {w.votiva.status}
                 </span>
-                <Out href={LINKS.votiva} hint={w.open}>
-                  {w.votiva.visit}
-                </Out>
               </div>
             </div>
             <div className="stage stage--votiva">
@@ -275,6 +279,15 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
                 <figcaption>{w.votiva.cardSub}</figcaption>
               </figure>
             </div>
+          </div>
+          <div className="strip" aria-label={w.votiva.stripCap}>
+            <ul className="strip__track">
+              {[...VOTIVA, ...VOTIVA].map((src, i) => (
+                <li key={i} aria-hidden={i >= VOTIVA.length ? true : undefined}>
+                  <img src={src} alt="" loading="lazy" decoding="async" width={520} height={1130} />
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

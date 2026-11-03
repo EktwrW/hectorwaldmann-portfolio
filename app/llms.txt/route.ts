@@ -48,10 +48,12 @@ shipping production apps to the App Store, Google Play and the web.
   Tailwind on Cloudflare Workers; an AI assistant (Claude API) that answers only
   from the site's catalogue; one inbox for web chat and email with translation
   both ways. [wenekaton.com](https://wenekaton.com/)
-- Votiva (own product, September 2026 to now): an AI prayer companion for iOS and
-  Android in Spanish, English and Portuguese — guided prayers with Bible verses
-  and narrated audio. Flutter, FastAPI on Cloud Run, Claude, RevenueCat. Coming
-  soon to the App Store and Google Play. [getvotiva.com](https://getvotiva.com/)
+- Votiva (own product, September 2026 to now): a Catholic prayer companion in
+  Spanish, English and Portuguese — a prayer written for what you are living
+  through, with a real Bible passage, plus guided rosary, novenas, Angelus and
+  Way of the Cross. Flutter, FastAPI on Cloud Run, Claude, RevenueCat. Live on
+  the App Store since 2 November 2026 (version 1.4.0); Google Play next.
+  [App Store](https://apps.apple.com/app/id6819710768) · [getvotiva.com](https://getvotiva.com/)
 - GoTribe Fitness (Band of Coders, 2021–2022): built from scratch in Flutter
   and BLoC over GraphQL, with multi-device Bluetooth LE heart-rate streaming.
   [App Store](https://apps.apple.com/us/app/gotribe-fitness/id6747635444) ·

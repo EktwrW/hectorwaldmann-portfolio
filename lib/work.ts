@@ -18,6 +18,7 @@ export const LINKS = {
   foodlyWeb: "https://foodly.solutions/",
   wenekaton: "https://wenekaton.com/",
   votiva: "https://getvotiva.com/",
+  votivaIos: "https://apps.apple.com/app/id6819710768",
   gotribeIos: "https://apps.apple.com/us/app/gotribe-fitness/id6747635444",
   gotribeAndroid: "https://play.google.com/store/apps/details?id=com.gotribe.app",
   bandOfCoders: "https://www.bandofcoders.com/",
@@ -40,7 +41,7 @@ export type Work = {
     web: string; panelCap: string; phoneCap: string; stripCap: string;
   };
   wenekaton: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; visit: string };
-  votiva: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; status: string; card: string; cardSub: string; visit: string; clipCap: string };
+  votiva: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; status: string; card: string; cardSub: string; visit: string; clipCap: string; stripCap: string };
   gotribe: { kicker: string; tagline: string; p1: string; p2: string; facts: Fact[]; agency: string };
   keel: { kicker: string; tagline: string; p1: string; notes: CaseNote[]; note: string; recs: string };
   credits: { eyebrow: string; h2: string; items: Credit[]; stackH: string; stack: { k: string; v: string }[] };
@@ -57,7 +58,7 @@ const en: Work = {
   ticker: [
     "Foodly 2.3.0 — App Store & Google Play — 27 Oct 2026",
     "WenekaTón — live in 4 languages with an AI concierge",
-    "Votiva — coming soon to the App Store & Google Play",
+    "Votiva 1.4 — live on the App Store since 2 Nov 2026 · Google Play next",
     "GoTribe Fitness 4.0 — App Store & Google Play",
     "Open to freelance, contract & full-time work",
   ],
@@ -93,18 +94,19 @@ const en: Work = {
   votiva: {
     kicker: "Own product · Apps 369 · Sep 2026 — now",
     tagline: "A prayer for what you’re living through.",
-    p1: "An AI prayer companion. You write down what you carry in your heart, and Votiva turns it into a guided prayer with Bible verses and narrated audio. Flutter on a FastAPI backend on Cloud Run; I chose Claude Sonnet over Haiku by running an evaluation set (20 of 20 against 17 of 20).",
+    p1: "A Catholic prayer companion, live on the App Store since 2 November 2026. You tell it what you are living through, and Votiva writes a prayer for you with a real Bible passage chosen for that moment, to read or listen to — plus a guided rosary, novenas, the Angelus and the Way of the Cross. Flutter on a FastAPI backend on Cloud Run; I chose Claude Sonnet over Haiku by running an evaluation set (20 of 20 against 17 of 20).",
     p2: "Faith is special-category data under GDPR, so it is treated that way: what people write is never logged, and the person being prayed for is never sent to the model. Firebase App Check and daily quotas protect the paid AI service; RevenueCat subscriptions start after three free prayers.",
     facts: [
       { k: "Stack", v: "Flutter · FastAPI · Claude" },
-      { k: "Platforms", v: "iOS · Android" },
+      { k: "Version", v: "1.4.0 · 2 Nov 2026" },
       { k: "Languages", v: "ES · EN · PT" },
     ],
-    status: "Coming soon · App Store & Google Play",
+    status: "Google Play · coming soon",
     card: "“Una oración para lo que estás viviendo.”",
     cardSub: "getvotiva.com · iOS · Android",
     visit: "getvotiva.com",
     clipCap: "Mood footage from the launch campaign",
+    stripCap: "The App Store listing",
   },
   gotribe: {
     kicker: "Agency · Band of Coders, Atlanta · 2021 — 2022",
@@ -151,7 +153,7 @@ const es: Work = {
   ticker: [
     "Foodly 2.3.0 — App Store y Google Play — 27 oct 2026",
     "WenekaTón — en línea en 4 idiomas, con un conserje de IA",
-    "Votiva — muy pronto en App Store y Google Play",
+    "Votiva 1.4 — en App Store desde el 2 nov 2026 · Google Play, lo siguiente",
     "GoTribe Fitness 4.0 — App Store y Google Play",
     "Disponible para freelance, contrato y tiempo completo",
   ],
@@ -187,18 +189,19 @@ const es: Work = {
   votiva: {
     kicker: "Producto propio · Apps 369 · sep 2026 — hoy",
     tagline: "Una oración para lo que estás viviendo.",
-    p1: "Un acompañante de oración con IA. Escribes lo que llevas en el corazón y Votiva lo convierte en una oración guiada, con versículos de la Biblia y audio narrado. Flutter sobre un backend FastAPI en Cloud Run; elegí Claude Sonnet frente a Haiku con un set de evaluación (20 de 20 contra 17 de 20).",
+    p1: "Un acompañante de oración católica, en App Store desde el 2 de noviembre de 2026. Le cuentas lo que estás viviendo y Votiva escribe una oración para ti, con un pasaje real de la Biblia elegido para ese momento, para leer o escuchar — además del rosario guiado, novenas, el Ángelus y el Vía Crucis. Flutter sobre un backend FastAPI en Cloud Run; elegí Claude Sonnet frente a Haiku con un set de evaluación (20 de 20 contra 17 de 20).",
     p2: "La fe es un dato de categoría especial según el RGPD, y se trata así: lo que la gente escribe nunca se registra, y la persona por la que se reza nunca se envía al modelo. Firebase App Check y cuotas diarias protegen el servicio de IA; las suscripciones con RevenueCat empiezan tras tres oraciones gratis.",
     facts: [
       { k: "Stack", v: "Flutter · FastAPI · Claude" },
-      { k: "Plataformas", v: "iOS · Android" },
+      { k: "Versión", v: "1.4.0 · 2 nov 2026" },
       { k: "Idiomas", v: "ES · EN · PT" },
     ],
-    status: "Muy pronto · App Store y Google Play",
+    status: "Google Play · muy pronto",
     card: "“Una oración para lo que estás viviendo.”",
     cardSub: "getvotiva.com · iOS · Android",
     visit: "getvotiva.com",
     clipCap: "Imágenes de la campaña de lanzamiento",
+    stripCap: "La ficha en App Store",
   },
   gotribe: {
     kicker: "Agencia · Band of Coders, Atlanta · 2021 — 2022",
@@ -245,7 +248,7 @@ const pt: Work = {
   ticker: [
     "Foodly 2.3.0 — App Store e Google Play — 27 out 2026",
     "WenekaTón — online em 4 idiomas, com um concierge de IA",
-    "Votiva — brevemente na App Store e no Google Play",
+    "Votiva 1.4 — na App Store desde 2 nov 2026 · Google Play a seguir",
     "GoTribe Fitness 4.0 — App Store e Google Play",
     "Disponível para freelance, contrato e tempo inteiro",
   ],
@@ -281,18 +284,19 @@ const pt: Work = {
   votiva: {
     kicker: "Produto próprio · Apps 369 · set 2026 — hoje",
     tagline: "Uma oração para o que está a viver.",
-    p1: "Um companheiro de oração com IA. Escreve o que leva no coração e a Votiva transforma-o numa oração guiada, com versículos da Bíblia e áudio narrado. Flutter sobre um backend FastAPI no Cloud Run; escolhi o Claude Sonnet em vez do Haiku com um conjunto de avaliação (20 em 20 contra 17 em 20).",
+    p1: "Um companheiro de oração católica, na App Store desde 2 de novembro de 2026. Conta-lhe o que está a viver e a Votiva escreve uma oração para si, com uma passagem real da Bíblia escolhida para esse momento, para ler ou ouvir — além do terço guiado, novenas, o Angelus e a Via-Sacra. Flutter sobre um backend FastAPI no Cloud Run; escolhi o Claude Sonnet em vez do Haiku com um conjunto de avaliação (20 em 20 contra 17 em 20).",
     p2: "A fé é um dado de categoria especial segundo o RGPD, e é tratada assim: o que as pessoas escrevem nunca é registado, e a pessoa por quem se reza nunca é enviada ao modelo. O Firebase App Check e quotas diárias protegem o serviço de IA; as subscrições RevenueCat começam após três orações grátis.",
     facts: [
       { k: "Stack", v: "Flutter · FastAPI · Claude" },
-      { k: "Plataformas", v: "iOS · Android" },
+      { k: "Versão", v: "1.4.0 · 2 nov 2026" },
       { k: "Idiomas", v: "ES · EN · PT" },
     ],
-    status: "Brevemente · App Store e Google Play",
+    status: "Google Play · brevemente",
     card: "“Una oración para lo que estás viviendo.”",
     cardSub: "getvotiva.com · iOS · Android",
     visit: "getvotiva.com",
     clipCap: "Imagens da campanha de lançamento",
+    stripCap: "A ficha na App Store",
   },
   gotribe: {
     kicker: "Agência · Band of Coders, Atlanta · 2021 — 2022",
