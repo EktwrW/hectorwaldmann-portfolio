@@ -33,6 +33,10 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // The site never uses next/image, so the built-in image optimiser at
+  // /_next/image is switched off: it is the part of Next.js 14 with the
+  // most serious open advisories, and nothing here needs it.
+  images: { unoptimized: true },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
