@@ -631,11 +631,6 @@ details.q p{color:var(--text-muted);font-size:14.5px;margin-top:12px;max-width:7
   line-height:1.15;color:#fbf3e4}
 .prayer figcaption{margin-top:28px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:rgba(251,243,228,.6)}
-.status{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 18px;border-radius:999px;
-  border:1px solid rgba(241,200,122,.32);background:rgba(241,200,122,.1);color:#f1c87a;
-  font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase}
-.status i{width:7px;height:7px;border-radius:50%;background:#f1c87a;animation:blink 1.8s ease-in-out infinite}
-@keyframes blink{50%{opacity:.25}}
 
 /* GoTribe and Keel: light instead of footage */
 .glow{position:absolute;inset:0}
@@ -722,7 +717,7 @@ details.q p{color:var(--text-muted);font-size:14.5px;margin-top:12px;max-width:7
   .facts{gap:14px 24px}
 }
 @media (prefers-reduced-motion:reduce){
-  .ticker__track,.strip__track,.candle,.voice i,.status i{animation:none}
+  .ticker__track,.strip__track,.candle,.voice i{animation:none}
   .cycle img{transition:none}
 }
 

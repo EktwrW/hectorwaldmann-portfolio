@@ -52,8 +52,10 @@ shipping production apps to the App Store, Google Play and the web.
   Spanish, English and Portuguese — a prayer written for what you are living
   through, with a real Bible passage, plus guided rosary, novenas, Angelus and
   Way of the Cross. Flutter, FastAPI on Cloud Run, Claude, RevenueCat. Live on
-  the App Store since 2 November 2026 (version 1.4.0); Google Play next.
-  [App Store](https://apps.apple.com/app/id6819710768) · [getvotiva.com](https://getvotiva.com/)
+  the App Store (since 2 November 2026) and Google Play (version 1.4.3).
+  [App Store](https://apps.apple.com/app/id6819710768) ·
+  [Google Play](https://play.google.com/store/apps/details?id=com.getvotiva.app) ·
+  [getvotiva.com](https://getvotiva.com/)
 - GoTribe Fitness (Band of Coders, 2021–2022): built from scratch in Flutter
   and BLoC over GraphQL, with multi-device Bluetooth LE heart-rate streaming.
   [App Store](https://apps.apple.com/us/app/gotribe-fitness/id6747635444) ·

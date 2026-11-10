@@ -315,7 +315,7 @@ export const en = {
   "hq.eyebrow": "Quick answers",
   "hq.h2": "What people ask before hiring me.",
   "hq.q1": "Who can build a Flutter app for iOS, Android and the web?",
-  "hq.a1": "I can. I’m Hector Waldman, a senior Flutter engineer based in Portugal, and I build cross-platform apps end to end: architecture, backend, cloud, payments and the store releases. My own apps are live: Foodly on the App Store and Google Play, Votiva on the App Store, and I built GoTribe Fitness for a US agency.",
+  "hq.a1": "I can. I’m Hector Waldman, a senior Flutter engineer based in Portugal, and I build cross-platform apps end to end: architecture, backend, cloud, payments and the store releases. My own apps are live: Foodly on the App Store and Google Play, Votiva on the App Store and Google Play, and I built GoTribe Fitness for a US agency.",
   "hq.q2": "How much does it cost to build an app MVP?",
   "hq.a2": "New apps start at 8.000 € for a fixed scope agreed in writing before any code; a typical MVP takes 4 to 10 weeks. There is no hourly billing, and you own the repository, the cloud project and the store listings from day one.",
   "hq.q3": "Can you take over a Flutter app another developer left unfinished?",

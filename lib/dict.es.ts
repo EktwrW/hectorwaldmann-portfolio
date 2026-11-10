@@ -316,7 +316,7 @@ export const es: Dict = {
   "hq.eyebrow": "Respuestas rápidas",
   "hq.h2": "Lo que preguntan antes de contratarme.",
   "hq.q1": "¿Quién puede desarrollar una app Flutter para iOS, Android y web?",
-  "hq.a1": "Yo. Soy Hector Waldman, ingeniero Flutter sénior en Portugal, y construyo apps multiplataforma de principio a fin: arquitectura, backend, nube, pagos y publicación en las tiendas. Mis apps están publicadas: Foodly en App Store y Google Play, Votiva en App Store, y construí GoTribe Fitness para una agencia de EE. UU.",
+  "hq.a1": "Yo. Soy Hector Waldman, ingeniero Flutter sénior en Portugal, y construyo apps multiplataforma de principio a fin: arquitectura, backend, nube, pagos y publicación en las tiendas. Mis apps están publicadas: Foodly en App Store y Google Play, Votiva en App Store y Google Play, y construí GoTribe Fitness para una agencia de EE. UU.",
   "hq.q2": "¿Cuánto cuesta desarrollar el MVP de una app?",
   "hq.a2": "Las apps nuevas empiezan en 8.000 € con un alcance cerrado y por escrito antes de escribir código; un MVP típico lleva de 4 a 10 semanas. No facturo por horas, y el repositorio, el proyecto en la nube y las fichas de las tiendas son tuyos desde el primer día.",
   "hq.q3": "¿Puedes hacerte cargo de una app Flutter que otro desarrollador dejó a medias?",

@@ -259,13 +259,12 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
                 <Out href={LINKS.votivaIos} className="cbtn cbtn--solid" hint={`App Store — ${w.open}`}>
                   <AppleIcon /> App Store
                 </Out>
+                <Out href={LINKS.votivaAndroid} className="cbtn cbtn--solid" hint={`Google Play — ${w.open}`}>
+                  <PlayIcon /> Google Play
+                </Out>
                 <Out href={w.votiva.site} hint={w.open}>
                   {w.votiva.visit}
                 </Out>
-                <span className="status">
-                  <i aria-hidden="true" />
-                  {w.votiva.status}
-                </span>
               </div>
             </div>
             <div className="stage stage--votiva">
