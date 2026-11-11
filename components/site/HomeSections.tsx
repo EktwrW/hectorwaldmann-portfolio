@@ -9,7 +9,9 @@ import ChapterRail from "./home/ChapterRail";
 const SLIDES = [1, 2, 3, 4, 5, 6, 7, 8];
 const GOTRIBE = [1, 2, 3, 4].map((n) => `/work/gotribe-0${n}.webp`);
 const QA = [1, 2, 3, 4, 5, 6] as const;
-const VOTIVA = [1, 2, 3, 4, 5, 6].map((n) => `/work/votiva-0${n}.webp`);
+// Store screenshots from getvotiva.com/press, one set per site language.
+const VOTIVA_SCREENS = ["01-home", "02-prayer", "03-compose-filled", "04-rosary-hail-mary", "05-pray-along", "06-verses", "07-widget", "08-via-crucis"];
+const votivaScreens = (locale: Locale) => VOTIVA_SCREENS.map((name) => `/work/votiva/${locale}/${name}.webp`);
 
 function AppleIcon() {
   return (
@@ -92,6 +94,7 @@ function Browser({ url, children, className = "" }: { url: string; children: Rea
 export default function HomeSections({ t, locale }: { t: Dict; locale: Locale }) {
   const svc = localePath(locale, "services");
   const w = getWork(locale);
+  const votiva = votivaScreens(locale);
 
   const chapters = [
     { id: "foodly", n: "01", name: "Foodly" },
@@ -281,8 +284,8 @@ export default function HomeSections({ t, locale }: { t: Dict; locale: Locale })
           </div>
           <div className="strip" aria-label={w.votiva.stripCap}>
             <ul className="strip__track">
-              {[...VOTIVA, ...VOTIVA].map((src, i) => (
-                <li key={i} aria-hidden={i >= VOTIVA.length ? true : undefined}>
+              {[...votiva, ...votiva].map((src, i) => (
+                <li key={i} aria-hidden={i >= votiva.length ? true : undefined}>
                   <img src={src} alt="" loading="lazy" decoding="async" width={520} height={1130} />
                 </li>
               ))}
